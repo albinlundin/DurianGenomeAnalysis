@@ -12,4 +12,5 @@ In this project a differential expression analysis will also be performed. To do
 * By 26th of april the goal is to be finsihed with the genome annotation, both the functional and structural. 
 * By 3rd of May the goal is to be finished with the mapping of RNA sequences using STAR.
 * By 11th of May the differential expression analysis should be finished.
+
 This timeframe might come across as a bit ambitious, but I do not know exactly how long each analysis will take. If some analyses takes longer than expected to perform or if errors occur it is possible that the timeframe will get extended slighlty. 
