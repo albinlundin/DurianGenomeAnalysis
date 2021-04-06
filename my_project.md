@@ -1,2 +1,2 @@
 # Project Plan
-The aim of this project is to partially reproduce the results from the paper "The draft genome of tropical fruit durian (Durio zibethinus)" by Bin Tean Teh et al. 
+The aim of this project is to partially reproduce the results from the paper "The draft genome of tropical fruit durian (Durio zibethinus)" by Bin Tean Teh et al. To reproduce these results a number of analyses and softwares will be used. To make the genome assembly based on the PacBio reads the software Canu will be used. In addition to performing the actual assembly this software will also be used to perform a quality control of the reads and to preprocess them (meaning that the reads will be trimmed).  
