@@ -6,7 +6,7 @@ To further improve the genome assembly, Illumina short reads will be used to cor
 
 For assessing the quality of the genome assembly the software QUAST will be used. The software BRAKER will be used to make a structural annotation of the genome and when running this software it is important that repeats in the assembly are masked (which is done with the software RepeatMasker), preferably softmasked. For performing a functional annotation the software eggNOGmapper will be used.   
 
-In this project a differential expression analysis will also be performed. To do this, the software STAR will be used to align RNA sequences to a reference (I guess the reference in this case would be the produced genome assembly). Then HTSeq will be used for counting how many reads that maps to each feature to compare the expression levels between cultivars. 
+In this project a differential expression analysis will also be performed. To do this, the software STAR will be used to align RNA sequences to a reference (I guess the reference in this case would be the produced genome assembly). Then HTSeq will be used for counting how many reads that maps to each feature and DESeq2 to compare the expression levels between cultivars. 
 ## Timeframe
 * By 15th of april the goal is to be finished with the genome assembly. This includes assembling the PacBio reads using Canu, to correct the PacBio assembly using Pilon and to mask repeats using RepeatMasker. 
 * By 26th of april the goal is to be finsihed with the genome annotation, both the functional and structural. 
