@@ -8,7 +8,7 @@ For assessing the quality of the genome assembly the software QUAST will be used
 
 In this project a differential expression analysis will also be performed. To do this, the software STAR will be used to align RNA sequences to a reference (I guess the reference in this case would be the produced genome assembly). Then HTSeq will be used for counting how many reads that maps to each feature and DESeq2 to compare the expression levels between cultivars. 
 
-An overview of the analyses, as well as their input and output can be seen in the following image:
+An overview of the analyses, as well as their inputs and outputs can be seen in the following image:
 ![alt text](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/images/ProjectPlan.png "Project plan")
 
 ## Timeframe
@@ -19,3 +19,8 @@ An overview of the analyses, as well as their input and output can be seen in th
 * By 11th of May the differential expression analysis should be finished.
 
 I do not know exactly how long time I need to start each analysis, but if it takes longer to get started with some analyses or if errors occur it is possible for the timeframe to be extended. 
+
+## Data organization
+I will handle various types of data, including fasta and fastq file with sequence information, SAM and BAM files with alignment information, tables with expression analysis data, and various output files from the different analyses. It is hard to know how much disk space is required to store all this data, but all data files will be kept compressed for as long as possible.
+
+
