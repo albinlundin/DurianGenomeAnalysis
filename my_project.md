@@ -12,13 +12,14 @@ An overview of the analyses, as well as their inputs and outputs can be seen in 
 ![alt text](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/images/ProjectPlan.png "Project plan")
 
 ## Timeframe
+To make sure this progress as it should, I have set up a few preliminary time checkpoints as seen below:
 * By 9th of april the goal is to submit a Canu job to Uppmax. 
 * By 15th of april the goal is to be finished with the genome assembly. This includes assembling the PacBio reads using Canu, to correct the PacBio assembly using Pilon and to mask repeats using RepeatMasker. 
 * By 23rd of april the goal is to be finsihed with the genome annotation, both the functional and structural. 
 * By 3rd of May the goal is to be finished with the mapping of RNA sequences using STAR.
 * By 11th of May the differential expression analysis should be finished.
 
-I do not know exactly how long time I need to start each analysis, but if it takes longer to get started with some analyses or if errors occur it is possible for the timeframe to be extended. 
+I do not know exactly how long time I need to start each analysis, but if it takes longer to get started with some analyses or if errors occur it is possible for the timeframe to be extended.
 
 ## Data organization
 I will handle various types of data, including fasta and fastq file with sequence information, SAM and BAM files with alignment information, tables with expression analysis data, and various output files from the different analyses. It is hard to know how much disk space is required to store all this data, but all data files will be kept compressed for as long as possible.
