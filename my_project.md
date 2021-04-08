@@ -23,4 +23,5 @@ I do not know exactly how long time I need to start each analysis, but if it tak
 ## Data organization
 I will handle various types of data, including fasta and fastq file with sequence information, SAM and BAM files with alignment information, tables with expression analysis data, and various output files from the different analyses. It is hard to know how much disk space is required to store all this data, but all data files will be kept compressed for as long as possible.
 
+All files will be kept in my project folder in Uppmax. The project folder contains this github repository in a separate folder, as well as a folder for all data. The data will not be included in the github repository. The data folder will have separate folders for each kind of data, e.g. Metadata and Raw data. In the github repository there will be a folder for all scripts, and they will be numbered and have informative names to easier get an overview in which order they were made and to what purpose.
 
