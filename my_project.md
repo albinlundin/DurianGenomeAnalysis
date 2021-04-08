@@ -12,7 +12,7 @@ An overview of the analyses, as well as their inputs and outputs can be seen in 
 ![alt text](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/images/ProjectPlan.png "Project plan")
 
 ## Timeframe
-To make sure this progress as it should, I have set up a few preliminary time checkpoints as seen below:
+To make sure this project progresses as it should, I have set up a few preliminary time checkpoints as seen below:
 * By 9th of april the goal is to submit a Canu job to Uppmax. 
 * By 15th of april the goal is to be finished with the genome assembly. This includes assembling the PacBio reads using Canu, to correct the PacBio assembly using Pilon and to mask repeats using RepeatMasker. 
 * By 23rd of april the goal is to be finsihed with the genome annotation, both the functional and structural. 
