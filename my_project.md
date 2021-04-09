@@ -28,6 +28,6 @@ All files will be kept in my project folder in Uppmax. The project folder contai
 
 # Daily log
 ## Week 1
-* 9th of april - Tried out Canu on uppmax and submitted the batch job 01.pacbio_assembly.sh to snowy (located at code/canu_assembly/).
+* 9th of april - Tried out Canu on uppmax and submitted the Canu batch job 01.pacbio_assembly.sh to snowy (located at code/canu_assembly/) to assemble the pacbio reads of scaffold 11.
 
 
