@@ -26,3 +26,8 @@ I will handle various types of data, including fasta and fastq file with sequenc
 
 All files will be kept in my project folder in Uppmax. The project folder contains this github repository, as well as a folder for all data. The data will not be included in the github repository. The data folder will have separate folders for each kind of data, e.g. Metadata, Raw data, Assemblys, and Alignments. In the github repository there will be a folder for all scripts, and they will be numbered and have informative names to easier get an overview in which order they were made and to what purpose.
 
+# Daily log
+## Week 1
+* 9th of april - Tried out Canu on uppmax and submitted the batch job 01.pacbio_assembly.sh to snowy (located at code/canu_assembly/).
+
+
