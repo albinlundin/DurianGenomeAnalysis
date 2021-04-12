@@ -1,0 +1,172 @@
+canu/2.0 has the useGrid option default set to useGrid=false. This can be overriden by another configuration file or a command-line option.
+-- Canu 2.0
+--
+-- Detected Java(TM) Runtime Environment '1.8.0_151' (from '/sw/comp/java/x86_64/sun_jdk1.8.0_151/bin/java') with -d64 support.
+-- Detected gnuplot version '4.6 patchlevel 2   ' (from 'gnuplot') and image format 'png'.
+-- Detected 16 CPUs and 126 gigabytes of memory.
+-- Detected Slurm with 'sinfo' binary in /usr/bin/sinfo.
+-- Grid engine and staging disabled per useGrid=false option.
+--
+--                                (tag)Concurrency
+--                         (tag)Threads          |
+--                (tag)Memory         |          |
+--        (tag)             |         |          |       total usage      algorithm
+--        -------  ----------  --------   --------  --------------------  -----------------------------
+-- Local: meryl     24.000 GB    8 CPUs x   2 jobs    48.000 GB  16 CPUs  (k-mer counting)
+-- Local: hap       12.000 GB   16 CPUs x   1 job     12.000 GB  16 CPUs  (read-to-haplotype assignment)
+-- Local: cormhap   32.000 GB   16 CPUs x   1 job     32.000 GB  16 CPUs  (overlap detection with mhap)
+-- Local: obtovl    16.000 GB   16 CPUs x   1 job     16.000 GB  16 CPUs  (overlap detection)
+-- Local: utgovl    16.000 GB   16 CPUs x   1 job     16.000 GB  16 CPUs  (overlap detection)
+-- Local: cor       16.000 GB    4 CPUs x   4 jobs    64.000 GB  16 CPUs  (read correction)
+-- Local: ovb        4.000 GB    1 CPU  x  16 jobs    64.000 GB  16 CPUs  (overlap store bucketizer)
+-- Local: ovs       16.000 GB    1 CPU  x   7 jobs   112.000 GB   7 CPUs  (overlap store sorting)
+-- Local: red       32.000 GB    8 CPUs x   2 jobs    64.000 GB  16 CPUs  (read error detection)
+-- Local: oea        8.000 GB    1 CPU  x  15 jobs   120.000 GB  15 CPUs  (overlap error adjustment)
+-- Local: bat      126.000 GB   16 CPUs x   1 job    126.000 GB  16 CPUs  (contig construction with bogart)
+-- Local: cns        -.--- GB    8 CPUs x   - jobs     -.--- GB   - CPUs  (consensus)
+-- Local: gfa       32.000 GB   16 CPUs x   1 job     32.000 GB  16 CPUs  (GFA alignment and processing)
+-- WARNING:
+-- WARNING:  Option '-pacbio-raw <files>' is deprecated.
+-- WARNING:  Use option '-pacbio <files>' in the future.
+-- WARNING:
+--
+-- Found untrimmed raw PacBio CLR reads in the input files.
+--
+-- Generating assembly '01_canuassembly' in '/domus/h1/allu5328/Documents/genome_analysis/project/Analyses/canu_assembly/01_canu_assembly':
+--    - correct raw reads.
+--    - trim corrected reads.
+--    - assemble corrected and trimmed reads.
+--
+-- Parameters:
+--
+--  genomeSize        800000000
+--
+--  Overlap Generation Limits:
+--    corOvlErrorRate 0.2400 ( 24.00%)
+--    obtOvlErrorRate 0.0450 (  4.50%)
+--    utgOvlErrorRate 0.0450 (  4.50%)
+--
+--  Overlap Processing Limits:
+--    corErrorRate    0.3000 ( 30.00%)
+--    obtErrorRate    0.0450 (  4.50%)
+--    utgErrorRate    0.0450 (  4.50%)
+--    cnsErrorRate    0.0750 (  7.50%)
+--
+--
+-- BEGIN CORRECTION
+--
+----------------------------------------
+-- Starting command on Fri Apr  9 14:41:21 2021 with 19409.949 GB free disk space
+
+    cd .
+    ./01_canuassembly.seqStore.sh \
+    > ./01_canuassembly.seqStore.err 2>&1
+
+-- Finished on Fri Apr  9 14:42:05 2021 (44 seconds) with 19409.171 GB free disk space
+----------------------------------------
+----------------------------------------
+-- Starting command on Fri Apr  9 14:42:05 2021 with 19409.171 GB free disk space
+
+    cd .
+    /sw/bioinfo/canu/2.0/rackham/Linux-amd64/bin/sqStoreDumpMetaData \
+      -S ./01_canuassembly.seqStore \
+      -raw \
+      -histogram \
+      -lengths \
+    > ./01_canuassembly.seqStore/readlengths-cor.dat \
+    2> ./01_canuassembly.seqStore/readlengths-cor.err 
+    
+
+-- Finished on Fri Apr  9 14:42:05 2021 (in the blink of an eye) with 19409.17 GB free disk space
+----------------------------------------
+----------------------------------------
+-- Starting command on Fri Apr  9 14:42:06 2021 with 19409.17 GB free disk space
+
+    cd .
+    /sw/bioinfo/canu/2.0/rackham/Linux-amd64/bin/sqStoreDumpMetaData \
+      -S ./01_canuassembly.seqStore \
+      -raw \
+      -histogram \
+    > ./01_canuassembly.seqStore/readlengths-cor.txt \
+    2> ./01_canuassembly.seqStore/readlengths-cor.err 
+    
+
+-- Finished on Fri Apr  9 14:42:06 2021 (furiously fast) with 19409.17 GB free disk space
+----------------------------------------
+--
+-- In sequence store './01_canuassembly.seqStore':
+--   Found 245450 reads.
+--   Found 1872884302 bases (2.34 times coverage).
+--    
+--    G=1872884302                       sum of  ||               length     num
+--    NG         length     index       lengths  ||                range    seqs
+--    ----- ------------ --------- ------------  ||  ------------------- -------
+--    00010        17226      9085    187298729  ||       1000-1891        17569|----------------------------------------------------------
+--    00020        14175     21169    374586998  ||       1892-2783        17842|-----------------------------------------------------------
+--    00030        12275     35417    561872695  ||       2784-3675        19150|---------------------------------------------------------------
+--    00040        10917     51626    749158226  ||       3676-4567        18888|---------------------------------------------------------------
+--    00050         9782     69760    936447519  ||       4568-5459        18362|-------------------------------------------------------------
+--    00060         8701     90047   1123731743  ||       5460-6351        17540|----------------------------------------------------------
+--    00070         7528    113125   1311024605  ||       6352-7243        17441|----------------------------------------------------------
+--    00080         6122    140571   1498310393  ||       7244-8135        17438|----------------------------------------------------------
+--    00090         4355    176413   1685599797  ||       8136-9027        17560|----------------------------------------------------------
+--    00100         1000    245449   1872884302  ||       9028-9919        16300|------------------------------------------------------
+--    001.000x              245450   1872884302  ||       9920-10811       14291|------------------------------------------------
+--                                               ||      10812-11703       11480|--------------------------------------
+--                                               ||      11704-12595        9102|------------------------------
+--                                               ||      12596-13487        7031|------------------------
+--                                               ||      13488-14379        5455|------------------
+--                                               ||      14380-15271        4337|---------------
+--                                               ||      15272-16163        3405|------------
+--                                               ||      16164-17055        2707|---------
+--                                               ||      17056-17947        2214|--------
+--                                               ||      17948-18839        1754|------
+--                                               ||      18840-19731        1282|-----
+--                                               ||      19732-20623        1003|----
+--                                               ||      20624-21515         729|---
+--                                               ||      21516-22407         597|--
+--                                               ||      22408-23299         475|--
+--                                               ||      23300-24191         335|--
+--                                               ||      24192-25083         249|-
+--                                               ||      25084-25975         209|-
+--                                               ||      25976-26867         158|-
+--                                               ||      26868-27759         146|-
+--                                               ||      27760-28651          79|-
+--                                               ||      28652-29543          74|-
+--                                               ||      29544-30435          52|-
+--                                               ||      30436-31327          38|-
+--                                               ||      31328-32219          43|-
+--                                               ||      32220-33111          25|-
+--                                               ||      33112-34003          18|-
+--                                               ||      34004-34895          22|-
+--                                               ||      34896-35787          17|-
+--                                               ||      35788-36679          11|-
+--                                               ||      36680-37571           6|-
+--                                               ||      37572-38463           2|-
+--                                               ||      38464-39355           3|-
+--                                               ||      39356-40247           4|-
+--                                               ||      40248-41139           1|-
+--                                               ||      41140-42031           2|-
+--                                               ||      42032-42923           2|-
+--                                               ||      42924-43815           0|
+--                                               ||      43816-44707           0|
+--                                               ||      44708-45599           2|-
+--    
+--
+-- ERROR:  Read coverage (2.34) lower than allowed.
+-- ERROR:    minInputCoverage  = 10
+-- ERROR:    stopOnLowCoverage = 10
+-- ERROR:
+-- ERROR:  This could be caused by an incorrect genomeSize or poor quality
+-- ERROR:  reads that cound not be sufficiently corrected.
+-- ERROR:
+-- ERROR:  You can force Canu to continue by decreasing parameters
+-- ERROR:  minInputCoverage and/or stopOnLowCoverage.  Be warned that the
+-- ERROR:  quality of corrected reads and/or contiguity of contigs will be poor.
+-- 
+
+ABORT:
+ABORT: Canu 2.0
+ABORT: Don't panic, but a mostly harmless error occurred and Canu stopped.
+ABORT: Try restarting.  If that doesn't work, ask for help.
+ABORT:
