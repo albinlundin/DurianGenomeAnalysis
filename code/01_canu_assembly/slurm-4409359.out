@@ -283,3 +283,4 @@ canu/2.0 has the useGrid option default set to useGrid=false. This can be overri
     ./precompute.sh 4 > ./precompute.000004.out 2>&1
     ./precompute.sh 5 > ./precompute.000005.out 2>&1
     ./precompute.sh 6 > ./precompute.000006.out 2>&1
+    ./precompute.sh 7 > ./precompute.000007.out 2>&1
