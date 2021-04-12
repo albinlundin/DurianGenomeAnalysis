@@ -31,4 +31,7 @@ All files will be kept in my project folder in Uppmax. The project folder contai
 * 9th of april - Tried out Canu on uppmax and submitted the Canu batch job "01.pacbio_assembly.sh" to snowy (located at code/canu_assembly/) to assemble the pacbio reads of scaffold 11. The submitted canu batch job did not work with -num_threads in the Canu command, so tried without it whereafter it complained for too low read coverage. Do not know how to proceed at the moment, if I should lower the coverage parameters or if I might have the wrong genome size specified in the canu command (currently I have set the genome size to 800m as estimated in the paper). 
 Also used FastQC to perform quality assessment of the illumina reads for scaffold 11. The 1P and 2P files worked but not the 1U and 2U, I do not know whats the difference between them.
 
+## Week 2
+* 12th of april - Resubmitted the canu script using 24m as genome size, now it seems to be working.
+
 
