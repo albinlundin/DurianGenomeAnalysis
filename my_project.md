@@ -33,5 +33,6 @@ Also used FastQC to perform quality assessment of the illumina reads for scaffol
 
 ## Week 2
 * 12th of april - Resubmitted the canu script using 24m as genome size, now it seems to be working.
+* 13th of april - Looked into how to use Trimmomatic, BWA and Pilon
 
 
