@@ -1,0 +1,12 @@
+Usage: java -jar $PILON_HOME/pilon.jar other-options...
+[E::hts_idx_push] NO_COOR reads not in a single block at the end 54 -1
+[E::sam_index] Read 'SRR6058604.23' with ref_name='tig00000081', ref_length=1121946, flags=99, pos=614632 cannot be indexed
+samtools index: failed to create index for "/home/allu5328/Documents/genome_analysis/project/Analyses/03_bwa_alignment/pacbio_illumina_alignment.bam"
+Pilon version 1.24 Thu Jan 28 13:00:45 2021 -0500
+Exception in thread "main" java.lang.IllegalArgumentException: requirement failed: /domus/h1/allu5328/Documents/genome_analysis/project/Analyses/03_bwa_alignment/pacbio_illumina_alignment.bam must be indexed BAM
+	at scala.Predef$.require(Predef.scala:338)
+	at org.broadinstitute.pilon.BamFile.<init>(BamFile.scala:58)
+	at org.broadinstitute.pilon.Pilon$.optionParse(Pilon.scala:165)
+	at org.broadinstitute.pilon.Pilon$.optionParse(Pilon.scala:172)
+	at org.broadinstitute.pilon.Pilon$.main(Pilon.scala:84)
+	at org.broadinstitute.pilon.Pilon.main(Pilon.scala)
