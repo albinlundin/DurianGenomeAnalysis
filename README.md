@@ -9,4 +9,4 @@ my_project.md contains the project plan.
 ```bash
 samtools view -S -b pacbio_illumina_alignment.sam > pacbio_illumina_alignment.bam
 ```
-4. The script 03_pilon_polishing.sh (in code/03_pilon_polishing) was used to improve the pacbio assembly using the bam file from step 3.
+4. The script 03_pilon_polishing.sh (in code/03_pilon_polishing) was used to improve the pacbio assembly using the bam file from step 3. This script also sorted and index the bam file using samtools.
