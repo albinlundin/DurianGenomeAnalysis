@@ -35,5 +35,9 @@ Also used FastQC to perform quality assessment of the illumina reads for scaffol
 * 12th of april - Resubmitted the canu script using 24m as genome size, now it seems to be working.
 * 13th of april - Looked into how to use Trimmomatic, BWA and Pilon
 * 14th of april - Made alignment of illumina reads to PacBio assembly using BWA. Improved the assembly using Pilon.
+* 15th of april - Made quality assesment of the assembly using quast, and softmasked the assembly using repeatmasker.
+
+## Week 3
+* 20th of april - Made quality assesment using mummerplot
 
 
