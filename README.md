@@ -15,7 +15,8 @@ samtools view -S -b pacbio_illumina_alignment.sam > pacbio_illumina_alignment.ba
 7. As an extra quality check of the polished assembly, mummer was used as seen below. The resulting PNG of the multiplot can be found in "resutls/mummer/"
 ```bash
 nucmer /home/allu5328/Documents/genome_analysis/project/Data/Reference_sequences/reference_sequence_scaffold_11.fasta \ /home/allu5328/Documents/genome_analysis/project/Data/04_pilon_polishing/pilon.fasta > nucmer_out.txt
-
-mummerplot -p multiplot -l --png out.delta
+delta-filter -q out.delta > out.delta.filter
+mummerplot -p multiplot_filtered -l --png out.delta.filter
+mummerplot -p filtered --png out.delta.filter
 ```
 8. Rna...
