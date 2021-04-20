@@ -10,3 +10,6 @@ my_project.md contains the project plan.
 samtools view -S -b pacbio_illumina_alignment.sam > pacbio_illumina_alignment.bam
 ```
 4. The script 03_pilon_polishing.sh (in code/03_pilon_polishing) was used to improve the pacbio assembly using the bam file from step 3. This script also sorted and index the bam file using samtools.
+5. To check the quality of the polished assembly quast was used (see code/04_quast_quality). 
+6. To softmask the pilon polished genome RepeatMasker was used as seen in the script located at "code/05_repeatmasker".
+7. As an extra quality check of the polished assembly, mummer was used.
