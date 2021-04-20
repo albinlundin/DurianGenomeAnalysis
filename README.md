@@ -12,11 +12,10 @@ samtools view -S -b pacbio_illumina_alignment.sam > pacbio_illumina_alignment.ba
 4. The script 03_pilon_polishing.sh (in code/03_pilon_polishing) was used to improve the pacbio assembly using the bam file from step 3. This script also sorted and index the bam file using samtools.
 5. To check the quality of the polished assembly quast was used (see code/04_quast_quality). 
 6. To softmask the pilon polished genome RepeatMasker was used as seen in the script located at "code/05_repeatmasker".
-7. As an extra quality check of the polished assembly, mummer was used.
+7. As an extra quality check of the polished assembly, mummer was used as seen below. The resulting PNG of the multiplot can be found in "resutls/mummer/"
 ```bash
 nucmer /home/allu5328/Documents/genome_analysis/project/Data/Reference_sequences/reference_sequence_scaffold_11.fasta \ /home/allu5328/Documents/genome_analysis/project/Data/04_pilon_polishing/pilon.fasta > nucmer_out.txt
 
 mummerplot -p multiplot -l --png out.delta
 ```
-The resulting PNG of the multiplot can be found in "resutls/mummer/"
 8. Rna...
