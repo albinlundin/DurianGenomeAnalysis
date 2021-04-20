@@ -19,4 +19,4 @@ nucmer /home/allu5328/Documents/genome_analysis/project/Data/Reference_sequences
 mummerplot -p multiplot -l --png out.delta
 ```
 The resulting PNG of the multiplot can be found in "resutls/mummer/"
-8. 
+8. Rna...
