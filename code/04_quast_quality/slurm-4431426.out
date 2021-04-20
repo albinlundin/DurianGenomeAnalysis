@@ -1,0 +1,120 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"quast/5.0.2"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore-cache load "quast/5.0.2"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+/sw/apps/bioinfo/quast/5.0.2/rackham/bin/quast.py -o /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/ -r /home/allu5328/Documents/genome_analysis/project/Data/Reference_sequences/reference_sequence_scaffold_11.fasta.gz /home/allu5328/Documents/genome_analysis/project/Data/04_pilon_polishing/pilon.fasta
+
+Version: 5.0.2
+
+System information:
+  OS: Linux-3.10.0-1160.21.1.el7.x86_64-x86_64-with-centos-7.9.2009-Core (linux_64)
+  Python version: 3.7.2
+  CPUs number: 16
+
+Started: 2021-04-16 11:32:57
+
+Logging to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/quast.log
+NOTICE: Maximum number of threads is set to 4 (use --threads option to set it manually)
+
+CWD: /domus/h1/allu5328/Documents/genome_analysis/project/DurianGenomeAnalysis/code/04_quast_quality
+Main parameters: 
+  MODE: default, threads: 4, minimum contig length: 500, minimum alignment length: 65, \
+  ambiguity: one, threshold for extensive misassembly size: 1000
+
+Reference:
+  /home/allu5328/Documents/genome_analysis/project/Data/Reference_sequences/reference_sequence_scaffold_11.fasta.gz ==> reference_sequence_scaffold_11
+
+Contigs:
+  Pre-processing...
+  /home/allu5328/Documents/genome_analysis/project/Data/04_pilon_polishing/pilon.fasta ==> pilon
+
+2021-04-16 11:33:04
+Running Basic statistics processor...
+  Reference genome:
+    reference_sequence_scaffold_11.fasta, length = 23775123, num fragments = 1, GC % = 30.18
+  Contig files: 
+    pilon
+  Calculating N50 and L50...
+    pilon, N50 = 310005, L50 = 18, Total length = 34569931, GC % = 30.62, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/basic_stats/GC_content_plot.pdf
+  Drawing pilon GC content plot...
+    saved to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/basic_stats/pilon_GC_content_plot.pdf
+Done.
+
+2021-04-16 11:33:11
+Running Contig analyzer...
+  pilon
+  Logging to files /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/contigs_reports/contigs_report_pilon.stdout and contigs_report_pilon.stderr...
+  Aligning contigs to the reference
+  Analysis is finished.
+  Creating total report...
+    saved to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/contigs_reports/misassemblies_plot.pdf
+  Drawing misassemblies FRCurve plot...
+    saved to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/contigs_reports/misassemblies_frcurve_plot.pdf
+Done.
+
+2021-04-16 11:34:55
+Running NA-NGA calculation...
+  pilon, Largest alignment = 1421498, NA50 = 140672, NGA50 = 315796, LA50 = 49, LGA50 = 21
+  Drawing cumulative plot...
+    saved to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/aligned_stats/NGAx_plot.pdf
+Done.
+
+2021-04-16 11:34:57
+Running Genome analyzer...
+  NOTICE: No file with genomic features were provided. Use the --features option if you want to specify it.
+
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  pilon
+  Analysis is finished.
+  Skipping drawing Genome fraction, % histogram... (less than 2 columns histogram makes no sense)
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2021-04-16 11:35:08
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2021-04-16 11:35:11
+RESULTS:
+  Text versions of total report are saved to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/report.html
+  PDF version (tables and plots) is saved to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/report.pdf
+  Icarus (contig browser) is saved to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/icarus.html
+  Log is saved to /home/allu5328/Documents/genome_analysis/project/Analyses/05_quast_quality/quast.log
+
+Finished: 2021-04-16 11:35:11
+Elapsed time: 0:02:13.864970
+NOTICEs: 4; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

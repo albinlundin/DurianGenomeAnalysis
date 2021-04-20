@@ -3,3 +3,9 @@
 02_bwa_pacbio_illumina contains the bwa code for aligning illumina reads with the assmeble pacbio genome.
 
 03_pilon_polishing contains the code for polishing the assembled pacbio genome with the illumina reads.
+
+04_quast_quality contains the script for checking the quality of the polished assembly
+
+05_repeatmasker contains the script for softmasking the polished assembly
+
+06_mummer contains the script for mummer, quality check of the pilon polished assembly
