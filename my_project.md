@@ -38,6 +38,7 @@ Also used FastQC to perform quality assessment of the illumina reads for scaffol
 * 15th of april - Made quality assesment of the assembly using quast, and softmasked the assembly using repeatmasker.
 
 ## Week 3
-* 20th of april - Made quality assesment using mummerplot
+* 20th of april - Made quality assesment using mummerplot of my assembly
+* 22nd of april - Made quality assessments of the untrimmed rna reads that should be used for the functional annotation and expression analysis. Look slightly into how to use trimmomatic
 
 
