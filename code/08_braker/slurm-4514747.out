@@ -1,0 +1,33 @@
+augustus/3.4.0 : If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.4.0'
+blast/2.2.31+ : the old-format NCBI blast databases are no longer updated after September 2019, use blast/2.9.0+ to search the latest NCBI databases
+GeneMark/4.62-es : A recent key file is needed to use this software and it must exist in your home directory. See 'module help GeneMark/4.62-es'
+GeneMark/4.62-es : A recent key file is needed to use this software and it must exist in your home directory. See 'module help GeneMark/4.62-es'
+diamond/0.9.31 : for available prebuilt databases, see 'module help diamond/0.9.31'
+braker/2.1.5-20210115-e98b812 : GeneMark and augustus may require some setup; see 'module help braker/2.1.5-20210115-e98b812'
+#**********************************************************************************
+#                               BRAKER CONFIGURATION                               
+#**********************************************************************************
+# BRAKER CALL: /sw/bioinfo/braker/2.1.5-20210115-e98b812/snowy/scripts/braker.pl --softmasking --genome=/home/allu5328/Documents/genome_analysis/project/Data/05_repeatmasker/pilon.fasta.masked.gz
+# Mon Apr 26 09:41:01 2021: braker.pl version 2.1.5
+# Mon Apr 26 09:41:01 2021: Configuring of BRAKER for using external tools...
+# Mon Apr 26 09:41:01 2021: Found environment variable $AUGUSTUS_CONFIG_PATH. Setting $AUGUSTUS_CONFIG_PATH to /home/allu5328/Documents/genome_analysis/augustus_config
+# Mon Apr 26 09:41:01 2021: Found environment variable $AUGUSTUS_BIN_PATH. Setting $AUGUSTUS_BIN_PATH to /sw/bioinfo/augustus/3.4.0/snowy/bin
+# Mon Apr 26 09:41:01 2021: Found environment variable $AUGUSTUS_SCRIPTS_PATH. Setting $AUGUSTUS_SCRIPTS_PATH to /sw/bioinfo/augustus/3.4.0/snowy/scripts
+# Mon Apr 26 09:41:01 2021: Did not find environment variable $PYTHON3_PATH
+# Mon Apr 26 09:41:01 2021: Trying to guess $PYTHON3_PATH from location of python3 executable that is available in your $PATH
+# Mon Apr 26 09:41:01 2021: Setting $PYTHON3_PATH to /sw/comp/python/3.7.2_snowy/bin
+# Mon Apr 26 09:41:01 2021: Did not find environment variable $GENEMARK_PATH  (either variable does not exist, or the path given in variable does not exist). Will try to set this variable in a different way, later.
+# Mon Apr 26 09:41:01 2021: Trying to guess $GENEMARK_PATH from location of gmes_petap.pl executable that is available in your $PATH
+# Mon Apr 26 09:41:01 2021: Setting $GENEMARK_PATH to /sw/bioinfo/GeneMark/4.62-es/snowy
+# Mon Apr 26 09:41:01 2021: Did not find environment variable $DIAMOND_PATH
+# Mon Apr 26 09:41:01 2021: Trying to guess $DIAMOND_PATH from location of diamond executable that is available in your $PATH
+# Mon Apr 26 09:41:01 2021: Setting $DIAMOND_PATH to /sw/bioinfo/diamond/0.9.31/snowy/bin
+# Mon Apr 26 09:41:01 2021: Did not find environment variable $CDBTOOLS_PATH
+# Mon Apr 26 09:41:01 2021: Trying to guess $CDBTOOLS_PATH from location of cdbfasta executable that is available in your $PATH
+# Mon Apr 26 09:41:01 2021: Setting $CDBTOOLS_PATH to /sw/bioinfo/cdbfasta/1.00/snowy/bin
+# Mon Apr 26 09:41:01 2021: ERROR: in file /sw/bioinfo/braker/2.1.5-20210115-e98b812/snowy/scripts/braker.pl at line 4471
+# In addition to a genome file, braker.pl requires at least one of the following files/flags as input (unless you run braker.pl --esmode):
+    --bam=file.bam
+    --hints=file.hints
+    --prot_seq=file.fa
+    --prot_aln=file.aln --trainFromGth

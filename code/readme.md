@@ -9,3 +9,7 @@
 05_repeatmasker contains the script for softmasking the polished assembly
 
 06_mummer contains the script for mummer, quality check of the pilon polished assembly
+
+07_trimmomatic contains the script for pre processing the two untrimmed transcripts
+
+08_braker contains the script for structural annotation of the pilon polished assembly
