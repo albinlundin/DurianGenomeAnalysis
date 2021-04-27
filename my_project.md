@@ -40,5 +40,6 @@ Also used FastQC to perform quality assessment of the illumina reads for scaffol
 ## Week 3
 * 20th of april - Made quality assesment using mummerplot of my assembly
 * 22nd of april - Made quality assessments of the untrimmed rna reads that should be used for the functional annotation and expression analysis. Look slightly into how to use trimmomatic
+* 32rd of april - Trimmed the untrimmed RNA reads using trimmomatic, started looking into braker.
 
 
