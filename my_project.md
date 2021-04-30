@@ -40,6 +40,9 @@ Also used FastQC to perform quality assessment of the illumina reads for scaffol
 ## Week 3
 * 20th of april - Made quality assesment using mummerplot of my assembly
 * 22nd of april - Made quality assessments of the untrimmed rna reads that should be used for the functional annotation and expression analysis. Look slightly into how to use trimmomatic
-* 23rd of april - Trimmed the untrimmed RNA reads using trimmomatic, started looking into braker.
+* 23rd of april - Trimmed the untrimmed RNA reads using trimmomatic and checked the quality of them using fastqc, started looking into braker.
 
+## Week 4
+* 28th of april - used STAR to make a RNA mapping to the softmasked, pilon polished assembly. Tried braker but something went wrong.
+* 29th of april - Manegad to solve the problems from the day before, but now new ones occured with braker. Re run star with some new parameters and tried braker again but no success.
 
