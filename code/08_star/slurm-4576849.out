@@ -1,0 +1,7 @@
+Apr 29 10:13:14 ..... started STAR run
+Apr 29 10:13:14 ... starting to generate Genome files
+
+EXITING because of INPUT ERROR: the file format of the genomeFastaFile: /home/allu5328/Documents/genome_analysis/project/Data/05_repeatmasker/pilon.fasta.masked.gz is not fasta: the first character is '' (31), not '>'.
+ Solution: check formatting of the fasta file. Make sure the file is uncompressed (unzipped).
+
+Apr 29 10:13:15 ...... FATAL ERROR, exiting

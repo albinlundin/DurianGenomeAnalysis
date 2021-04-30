@@ -1,0 +1,8 @@
+gzip: Read1.gz: No such file or directory
+Apr 29 14:24:54 ..... started STAR run
+Apr 29 14:24:54 ..... loading genome
+gzip: Read2.gz: No such file or directory
+Apr 29 14:24:56 ..... started mapping
+Apr 29 14:24:56 ..... finished mapping
+Apr 29 14:24:57 ..... finished successfully
+/var/spool/slurmd/job4578655/slurm_script: line 40: --readFilesIn: command not found

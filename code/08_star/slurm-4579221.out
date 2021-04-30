@@ -1,0 +1,13 @@
+Apr 29 15:59:46 ..... started STAR run
+Apr 29 15:59:46 ... starting to generate Genome files
+
+EXITING because of INPUT ERROR: could not open genomeFastaFile: /home/allu5328/Documents/genome_analysis/project/Data/05_repeatmasker/pilon.fasta.masked
+
+Apr 29 15:59:46 ...... FATAL ERROR, exiting
+Apr 29 15:59:46 ..... started STAR run
+Apr 29 15:59:47 ..... loading genome
+
+EXITING because of FATAL ERROR: could not open genome file /home/allu5328/Documents/genome_analysis/project/Analyses/11_star/star_take2/genomeDir//genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Apr 29 15:59:47 ...... FATAL ERROR, exiting

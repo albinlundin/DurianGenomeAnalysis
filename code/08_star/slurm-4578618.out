@@ -1,0 +1,8 @@
+Apr 29 14:17:02 ..... started STAR run
+Apr 29 14:17:02 ..... loading genome
+Apr 29 14:17:20 ..... started mapping
+
+ReadAlignChunk_processChunks.cpp:171:processChunks EXITING because of FATAL ERROR in input reads: unknown file format: the read ID should start with @ or > 
+
+Apr 29 14:17:21 ...... FATAL ERROR, exiting
+/var/spool/slurmd/job4578618/slurm_script: line 41: --readFilesCommand: command not found
