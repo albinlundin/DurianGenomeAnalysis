@@ -10,6 +10,8 @@
 
 06_mummer contains the script for mummer, quality check of the pilon polished assembly
 
-07_trimmomatic contains the script for pre processing the two untrimmed transcripts
+07_trimmomatic contains the script for pre processing the two untrimmed RNA transcripts
 
-08_braker contains the script for structural annotation of the pilon polished assembly
+08_star contains the script for RNA mapping to the softmasked, pilon polished genome, using all trimmed RNA sequences and the software STAR.
+
+09_braker contains the script for structural annotation of the pilon polished assembly, using the bam file produced by star as hints.
