@@ -31,3 +31,21 @@ mummerplot -p filtered --png out.delta.filter
 For the provided trimmed Illumina DNA reads the quality looked really good. The phred score was high for all base positions (which can be seen below) and everything else looked alright. 
 ![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/results/FastQC_DNA_Illumina/Illumina_DNA_Phred.png "Phred score")
 
+### Genome assembly
+
+#### Canu
+To make the assembly using Canu, the script at code/01_canu_assembly was used. Apart from doing the actual assembly, Canu also performs correction of the bases as well as trimming of low quality regions. In this script the genomeSize parameter was set to 24 million since that is roughly the length for scaffold 11 in the genome assembly produced by the authors of paper 5. The output report from canu gives some statistics about the assembly:
+* 87% of the PacBio reads has an overlap, which is a good thing since most of the reads has an overlap.
+* NG50 for the assembly equals 1,121,946 basepairs, meaning that reads of that length or longer makes up 50% of the genome.
+* LG50 for the assembly equals to 7 contigs, meaning that 7 contigs makes up the 50% of the genome.
+* Total length of the assembly equals 31.5 million base pairs. 
+* Number of contigs in the assembly is 745.
+
+My assembly is quite a bit longer compared to the one produced by the authors of paper 5, being approximately 30% longer. My assembly also consists of many contigs which does not look so good since a lower number of contigs is preferrable. However, I am quite satisfied with the LG50 and NG50 values since the LG50 value is low meaning that I do have some long contigs. Notice that these two values are in relation to the genomeSize parameter that was specified in the script to 24 million bases, and not to the total length of the assembly. 
+
+#### BWA
+
+#### Pilon
+
+#### RepeatMasker
+
