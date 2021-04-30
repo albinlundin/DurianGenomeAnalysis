@@ -29,5 +29,5 @@ mummerplot -p filtered --png out.delta.filter
 ## Analyses and results
 ### Quality check of the provided Illumina DNA reads using FastQC
 For the provided trimmed Illumina DNA reads the quality looked really good. The phred score was high for all base positions (which can be seen below) and everything else looked alright. 
-![alt text](https://github.com/albinlundin/DurianGenomeAnalysis/tree/main/results/FastQC_DNA_Illumina/Illumina_DNA_Phred.png "Phred score")
+![image](https://github.com/albinlundin/DurianGenomeAnalysis/tree/main/results/FastQC_DNA_Illumina/Illumina_DNA_Phred.png "Phred score")
 
