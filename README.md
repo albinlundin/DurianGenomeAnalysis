@@ -22,4 +22,12 @@ delta-filter -q out.delta > out.delta.filter
 mummerplot -p multiplot_filtered -l --png out.delta.filter
 mummerplot -p filtered --png out.delta.filter
 ```
-8. Rna...
+8. Trimmomatic was used to trimm the two untrimmed provided RNA sequence files, as seen in the script at code/07_trimmomatic. 
+9. Star was used to map all trimmed RNA seq files to the pilon polished, softmasked genome assembly to create a bam file. (No script working yet!)
+10. BRAKER was used to make a structural annotation of the genome assembly using the bam file produced by star as a hint.
+
+## Analyses and results
+### Quality check of the provided Illumina DNA reads using FastQC
+For the provided trimmed Illumina DNA reads the quality looked really good. The phred score was high for all base positions (which can be seen below) and everything else looked alright. 
+![alt text](https://github.com/albinlundin/DurianGenomeAnalysis/tree/main/results/FastQC_DNA_Illumina/Illumina_DNA_Phred.png "Phred score")
+
