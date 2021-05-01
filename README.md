@@ -44,8 +44,24 @@ To make the assembly using Canu, the script at code/01_canu_assembly was used. A
 My assembly is quite a bit longer compared to the one produced by the authors of paper 5, being approximately 30% longer. My assembly also consists of many contigs which does not look so good since a lower number of contigs is preferrable. However, I am quite satisfied with the LG50 and NG50 values since the LG50 value is low meaning that I do have some long contigs. Notice that these two values are in relation to the genomeSize parameter that was specified in the script to 24 million bases, and not to the total length of the assembly. 
 
 #### BWA
+To align the paired end Illumina reads to the canu assembled genome bwa was used according to the script at code/02_bwa_pacbio_illumina/. Here I used the commands bwa aln and bwa sampe, which generates alignments given paired-end data. However, now I am under the impression that bwa mem would have been a better choice for the alignment due to it being more accurate, according to the bwa manual. 
 
 #### Pilon
+To improve the canu assembly pilon was used according to the script located at code/03_pilon_polishing/. There are not many choices to be made here, or any outputed statistics so there is not much to discuss about this. 
 
 #### RepeatMasker
+To mask the assembly for repetetive sequences, repeatmasker was used according to the script at code/05_repeatmasker/. The used option '-xsmall' softmasks the genome. 2.68% of the assembly consisted of simple repeats, 1.1% of the genome had low complexity, and the GC level was measured to 30.6%. 
+
+#### Questions from the Student manual
+- What information can you get from the plots and reports given by the assembler (if you get any)?
+- What intermediate steps generate informative output about the assembly?
+- How many contigs do you expect? How many do you obtain?
+- What is the difference between a ‘contig’ and a ‘unitig’?
+- What is the difference between a ‘contig’ and a ‘scaffold’?
+- What are the k-mers? What k-mer(s) should you use? What are the problems and benefits of choosing a small kmer? And a big k-mer?
+- Some assemblers can include a read-correction step before doing the assembly. What is this step doing?
+- How different do different assemblers perform for the same data?
+- Can you see any other letter appart from AGTC in your assembly? If so, what are those?
+
+
 
