@@ -56,11 +56,14 @@ To mask the assembly for repetetive sequences, repeatmasker was used according t
 - What information can you get from the plots and reports given by the assembler (if you get any)?
 - What intermediate steps generate informative output about the assembly?
 - How many contigs do you expect? How many do you obtain?
+
 I got 745 contigs in my assembly of scaffold 11. I think the expected number of contigs is 70, since the authors of paper 5 had 69 assembly gaps when assembling scaffold 11. In that case I clearly have more.
 - What is the difference between a ‘contig’ and a ‘unitig’?
 - What is the difference between a ‘contig’ and a ‘scaffold’?
+
 A contig is a DNA sequence without any gaps. A scaffold is an arrangement of multiple contigs in the same order as they would be in the genome. A scaffold do contain gaps, a contig does not. 
 - What are the k-mers? What k-mer(s) should you use? What are the problems and benefits of choosing a small kmer? And a big k-mer?
+
 K-mers are sequences present in the genome. For instance 5-mers are all possible sequences you can get of length 5. K-mers are used in assembly to see which reads are overlapping. If you choose a small k-mer you will have many overlaps for the reads, but it will increase computation time and coudl make it harder to assemble. If using a large k-mer you will have less overlaps between the reads, which might make the assembly easier to perform, but if using a to large k-mer you could miss some overlaps between reads.
 - Some assemblers can include a read-correction step before doing the assembly. What is this step doing?
 - How different do different assemblers perform for the same data?
