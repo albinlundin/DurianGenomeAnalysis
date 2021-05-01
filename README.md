@@ -63,5 +63,11 @@ To mask the assembly for repetetive sequences, repeatmasker was used according t
 - How different do different assemblers perform for the same data?
 - Can you see any other letter appart from AGTC in your assembly? If so, what are those?
 
+### Quality of genome assembly
+#### QUAST
+
+#### MUMmerplot
+
+
 
 
