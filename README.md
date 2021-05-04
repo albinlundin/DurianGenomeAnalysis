@@ -11,7 +11,7 @@ samtools view -S -b pacbio_illumina_alignment.sam > pacbio_illumina_alignment.ba
 ```
 4. The script 03_pilon_polishing.sh (in code/03_pilon_polishing) was used to improve the pacbio assembly using the bam file from step 3. This script also sorted and index the bam file using samtools.
 5. To check the quality of the polished assembly quast was used (see code/04_quast_quality). 
-6. To softmask the pilon polished genome RepeatMasker was used as seen in the script located at "code/05_repeatmasker". 
+6. To softmask the pilon polished genome RepeatMasker was used as seen in the script "code/05_repeatmasker/05_repeatmasker.sh". The reference genome produced by the authors of paper 5 was also softmasked using the script "code/05_repeatmasker/reference_repeatmasker.sh". These scripts are essentially the same, only differing in the inputs. 
 7. As an extra quality check of the polished assembly, mummer was used as seen below. The resulting PNG of the multiplot can be found in "resutls/mummer/". Kepp in mind that the script in code/06_mummer does not work, and the code below was run directly on the command line.
 ```bash
 module load bioinfo-tools
@@ -23,8 +23,13 @@ mummerplot -p multiplot_filtered -l --png out.delta.filter
 mummerplot -p filtered --png out.delta.filter
 ```
 8. Trimmomatic was used to trimm the two untrimmed provided RNA sequence files, as seen in the script at code/07_trimmomatic. 
-9. Star was used to map all trimmed RNA seq files to the pilon polished, softmasked genome assembly to create a bam file. (No script working yet!)
-10. BRAKER was used to make a structural annotation of the genome assembly using the bam file produced by star as a hint.
+9. Star was used to map all trimmed RNA seq files to the pilon polished, softmasked genome assembly to create a bam file using the script "code/08_star/03_star.sh". To map the trimmed RNA sequences to the softmasked reference genome the script "code/08_star/04_star.sh" was used.
+10. BRAKER was used to make a structural annotation of the genome assembly using the bam files produced by star as a hint. I could not get this to work with my assembly, so this was made with the reference assembly using the script "code/09_braker/reference_braker.sh". 
+11. To make the gtf file from braker into a protein sequence this command was used:
+```bash
+/sw/bioinfo/augustus/3.4.0/snowy/scripts/gtf2aa.pl $genome $gtf prot.fa
+```
+where $genome is the path to the softmasked reference genome and $gtf the path to the gtf file produced by braker.
 
 ## Analyses and results
 ### Quality check of the provided Illumina DNA reads using FastQC
