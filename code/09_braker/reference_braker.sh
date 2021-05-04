@@ -4,7 +4,7 @@
 #SBATCH -p core
 #SBATCH -n 2
 #SBATCH -t 02:00:00
-#SBATCH -J braker_annotation
+#SBATCH -J braker_annotation_reference
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user albin.lundin.5328@student.uu.se
 
@@ -27,13 +27,14 @@ export AUGUSTUS_SCRIPTS_PATH=/sw/bioinfo/augustus/3.4.0/snowy/scripts
 export GENEMARK_PATH=/sw/bioinfo/GeneMark/4.33-es/snowy
 
 
-genome="/home/allu5328/Documents/genome_analysis/project/Data/05_repeatmasker/pilon.fasta.masked.gz"
-alignment="/home/allu5328/Documents/genome_analysis/project/Data/07_star_before_braker/Aligned.sortedByCoord.out.bam"
+genome="/home/allu5328/Documents/genome_analysis/project/Data/05_repeatmasker/reference/reference_sequence_scaffold_11.fasta.masked"
+alignment="/home/allu5328/Documents/genome_analysis/project/Data/07_star_before_braker/Aligned.sortedByCoord.reference.bam"
 
-cd /home/allu5328/Documents/genome_analysis/project/Analyses/12_braker/
+cd /home/allu5328/Documents/genome_analysis/project/Analyses/12_braker/reference/
 
-braker.pl --cores=2 --softmasking --species=Durian --useexisting --genome=$genome --bam=$alignment --min_contig=10000 \
+braker.pl --cores=2 --softmasking --species=Durian --genome=$genome --bam=$alignment \ 
 --AUGUSTUS_CONFIG_PATH=/home/allu5328/Documents/genome_analysis/augustus_config \
 --AUGUSTUS_BIN_PATH=/sw/bioinfo/augustus/3.4.0/snowy/bin \
 --AUGUSTUS_SCRIPTS_PATH=/sw/bioinfo/augustus/3.4.0/snowy/scripts \
 --GENEMARK_PATH=/sw/bioinfo/GeneMark/4.33-es/snowy
+
