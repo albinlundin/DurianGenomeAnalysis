@@ -30,6 +30,7 @@ mummerplot -p filtered --png out.delta.filter
 /sw/bioinfo/augustus/3.4.0/snowy/scripts/gtf2aa.pl $genome $gtf prot.fa
 ```
 where $genome is the path to the softmasked reference genome and $gtf the path to the gtf file produced by braker.
+
 12. The file prot.fa was submitted to eggnogmapper using the web interface. All options were kept at their default values.
 
 ## Analyses and results
