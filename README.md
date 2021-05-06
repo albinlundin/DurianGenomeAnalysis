@@ -25,9 +25,10 @@ mummerplot -p filtered --png out.delta.filter
 8. Trimmomatic was used to trimm the two untrimmed provided RNA sequence files, as seen in the script at code/07_trimmomatic. 
 9. Star was used to map all trimmed RNA seq files to the pilon polished, softmasked genome assembly to create a bam file using the script "code/08_star/03_star.sh". To map the trimmed RNA sequences to the softmasked reference genome the script "code/08_star/04_star.sh" was used.
 10. BRAKER was used to make a structural annotation of the genome assembly using the bam files produced by star as a hint. I could not get this to work with my assembly, so this was made with the reference assembly using the script "code/09_braker/reference_braker.sh". 
-11. To make the gtf file from braker into a protein sequence this command was used:
+11. To make the gtf file from braker into a protein sequence fasta fila and a gff file these two commands was used:
 ```bash
 /sw/bioinfo/augustus/3.4.0/snowy/scripts/gtf2aa.pl $genome $gtf prot.fa
+/sw/bioinfo/augustus/3.4.0/snowy/scripts/gtf2gff.pl $gtf --out=augustus.gff
 ```
 where $genome is the path to the softmasked reference genome and $gtf the path to the gtf file produced by braker.
 
