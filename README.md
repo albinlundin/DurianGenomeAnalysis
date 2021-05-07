@@ -28,7 +28,7 @@ mummerplot -p filtered --png out.delta.filter
 11. To make the gtf file from braker into a protein sequence fasta fila and a gff file these two commands was used:
 ```bash
 /sw/bioinfo/augustus/3.4.0/snowy/scripts/gtf2aa.pl $genome $gtf prot.fa
-/sw/bioinfo/augustus/3.4.0/snowy/scripts/gtf2gff.pl $gtf --out=augustus.gff
+/sw/bioinfo/augustus/3.4.0/snowy/scripts/gtf2gff.pl <$gtf --out=augustus.gff
 ```
 where $genome is the path to the softmasked reference genome and $gtf the path to the gtf file produced by braker.
 
