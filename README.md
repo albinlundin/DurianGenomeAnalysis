@@ -77,8 +77,9 @@ K-mers are sequences present in the genome. For instance 5-mers are all possible
 - How different do different assemblers perform for the same data?
 - Can you see any other letter appart from AGTC in your assembly? If so, what are those?
 
-### Quality of genome assembly
+### Quality assessment of genome assembly
 #### QUAST
+
 
 #### MUMmerplot
 
