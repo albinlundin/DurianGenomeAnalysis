@@ -128,6 +128,7 @@ For any of the metrics listed above the '50' can be changed to any number betwee
 2. How does your assembly compare with the reference assembly? What can have caused the differences?
 
 The largest difference between my assembly and the reference is the length. As discussed above, this could have happened if the assembler overestimates how many times a repeat sequence is present in repeat region. 
+
 3. Why do you think your assembly is better/worse than the public one?
 
 I think my assembly is worse than the public available one, becuase of the vast number of contigs in the assembly as well as the many missassemblies. 
