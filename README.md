@@ -79,7 +79,33 @@ K-mers are sequences present in the genome. For instance 5-mers are all possible
 
 ### Quality assessment of genome assembly
 #### QUAST
+To check the quality of the assembly, QUAST was used according to the script at "code/04_quast_quality". The full statistic output produced by QUAST can be seen in the html file "report.html" located at "results/quast/". Following is a summary of the statistcs presented there: 
+* Duplication ratio	1.229
+* Largest alignment	1,421,498
+* NG50	1,122,122
+* NG75	305,427
+* NGA50	315,796
+* LG50	7
+* LG75	19
+* LGA50	21
+* Misassemblies	258 (with 255 relocations and 3 inversions)
+* Misassembled contigs	126 (number of contigs with missassembly events)
+* Fully unaligned contigs	189
+* Fully unaligned length	2,067,295
+* Contigs in assembly	898
+* Largest contig	2,660,159
 
+A duplication ratio larger than 1 is quite expected considering that the total length of my assembly is 31.5 million bases, while the reference assembly roughly is 24 million bases. This happens because the assembly has multiple contigs covering the same part of the reference, which could happen if the assembly overestimates how many times a certain repeat sequence appears in a repeat region. Of course, this is something that could be improved during the assembly.
+
+The largest assembly being 1,421,498 bases long I consider as quite good. The highest score this assembly could acheive on this metric is 2,660,159 bases which is the same as the largest contig length. The fact that these two metrics are not the same indicates that there is at least one missassembly event in the largest contig in the assembly, which is also something that could be improved. 
+
+I consider a NG50 value of 1,122,122 and a LG50 value of 7 to be quite good, indicating that most of my assembly is consisting of long contigs and that only 7 contigs in the assembly is needed for covering 50% of the reference. If looking at a slight larger part of the reference genome the NG75 value is 305,427 bases and the LG75 value is 19, which I also consider to be good values. However, something yet again indicating missassemblies in these long contigs are the NGA50 and LGA50 values (being 315,796 and 21 respectively), taking a significant drop compared to the NG50 and LG50 values. 
+
+Overall, there were 258 missassemblies detected by QUAST which I think is quite high and definitely something that could be improved. The total number of contigs having missassemblies being 126 is something that indicates that the missassemblies is spread accross a quite large fraction of the contigs and not just confined to a few of the contigs, which would have been preferred. 
+
+There were also quite a few fully unaligned contigs, being 189 in total, taking up a significant fraction of the total number of contigs in the assembly. However, since their combined length is 2,067,295 it means that the average length of these contigs is roughly 11,000 bases which is not very long compared to some of the other contigs produced, and therefor maybe not as good anyway. 
+
+To conclude the QUAST quality assessment, I think that the metrics look quite good apart from the apparent missassemblies. 
 
 #### MUMmerplot
 
