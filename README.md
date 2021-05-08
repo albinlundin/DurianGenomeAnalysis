@@ -114,20 +114,21 @@ As an extra quality check of the genome assembly, mummerplot was used (or more s
 In this plot it is quite obvious that the assembly is quite a bit longer than reference sequence, but the continuous, red, diagonal line indicates that the content of the assembly is coherent with the reference, even if it consists of quite a few more contigs.
 
 #### Questions from the student manual regarding quality assessment
-* What do measures like N50, N90, etc. mean? How can they help you evaluate the quality of your assembly? Which measure is the best to summarize the quality of the assembly (N50, number of ORFs, completeness, total size, longest contig ...)
+1. What do measures like N50, N90, etc. mean? How can they help you evaluate the quality of your assembly? Which measure is the best to summarize the quality of the assembly (N50, number of ORFs, completeness, total size, longest contig ...)
 
-N50 - Contigs of this length or longer are needed to cover 50% of the assembly length
-NG50 - Contigs of this length or longer are needed to cover 50% of the reference length
-L50 - This many contigs are needed to cover 50% of the assembly length
-LG50 - This many contigs are needed to cover 50% of the reference length
-NGA50 - Same as NG50, with the difference that any contigs containing missassemblies in regard to the reference will be broken into smaller contigs
-LGA50 - Same as LG50, with the difference that any contigs containing missassemblies in regard to the reference will be broken into smaller contigs
+* N50 - Contigs of this length or longer are needed to cover 50% of the assembly length
+* NG50 - Contigs of this length or longer are needed to cover 50% of the reference length
+* L50 - This many contigs are needed to cover 50% of the assembly length
+* LG50 - This many contigs are needed to cover 50% of the reference length
+* NGA50 - Same as NG50, with the difference that any contigs containing missassemblies in regard to the reference will be broken into smaller contigs
+* LGA50 - Same as LG50, with the difference that any contigs containing missassemblies in regard to the reference will be broken into smaller contigs
+
 For any of the metrics listed above the '50' can be changed to any number between 0 and 100, thus reflecting any other percentage of the assembly or reference length. For example, N75 means: Contigs of this length or longer are needed to cover 75% of the assembly length. 
 
-* How does your assembly compare with the reference assembly? What can have caused the differences?
+2. How does your assembly compare with the reference assembly? What can have caused the differences?
 
 The largest difference between my assembly and the reference is the length. As discussed above, this could have happened if the assembler overestimates how many times a repeat sequence is present in repeat region. 
-* Why do you think your assembly is better/worse than the public one?
+3. Why do you think your assembly is better/worse than the public one?
 
 I think my assembly is worse than the public available one, becuase of the vast number of contigs in the assembly as well as the many missassemblies. 
 
