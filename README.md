@@ -108,7 +108,9 @@ There were also quite a few fully unaligned contigs, being 189 in total, taking 
 To conclude the QUAST quality assessment, I think that the metrics look quite good apart from the apparent missassemblies. 
 
 #### MUMmerplot
-
+As an extra quality check of the genome assembly, mummerplot was used (or more specific nucmer and mummerplot) as described in this readme document. (Note that the script at "code/mummer/" does not work). The following image (which can also be found at "results/mummer/") shows the multiplot produced by mummer:
+![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/results/mummer/multiplot_filtered.png "Mummer multiplot")
+In this plot it is quite obvious that the assembly is quite a bit longer than reference sequence, but the continuous, red, diagonal line indicates that the content of the assembly is coherent with the reference, even if it consists of quite a few more contigs.
 
 
 
