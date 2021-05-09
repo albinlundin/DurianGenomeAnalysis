@@ -34,7 +34,9 @@ where $genome is the path to the softmasked reference genome and $gtf the path t
 
 12. The file prot.fa was submitted to eggnogmapper using the web interface. All options were kept at their default values.
 
-13. 
+13. STAR was again used to align the trimmed RNA transcripts to the reference genome. This time the gtf file produced by braker was used when creating the genome index, as seen in the script "starDE.sh" located at "code/10_star_DE/". 
+
+14. HTSEQ-count was used to count every read mapping to a certain gene using the script "htseq.sh" located at "code/11htseq/". (this is not currently working)
 
 ## Analyses and results
 ### Quality check of the provided Illumina DNA reads using FastQC
