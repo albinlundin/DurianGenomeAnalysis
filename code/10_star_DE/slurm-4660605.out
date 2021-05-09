@@ -1,0 +1,26 @@
+May 06 11:08:30 ..... started STAR run
+May 06 11:08:30 ... starting to generate Genome files
+May 06 11:08:31 ... starting to sort Suffix Array. This may take a long time...
+May 06 11:08:31 ... sorting Suffix Array chunks and saving them to disk...
+May 06 11:08:38 ... loading chunks from disk, packing SA...
+May 06 11:08:39 ... finished generating suffix array
+May 06 11:08:39 ... generating Suffix Array index
+May 06 11:08:42 ... completed Suffix Array index
+May 06 11:08:42 ... writing Genome to disk ...
+May 06 11:08:42 ... writing Suffix Array to disk ...
+May 06 11:08:44 ... writing SAindex to disk
+May 06 11:08:44 ..... finished successfully
+/var/spool/slurmd/job4660605/slurm_script: line 24: --sjdbGTFfile: command not found
+/var/spool/slurmd/job4660605/slurm_script: line 25: --sjdbOverhang: command not found
+May 06 11:08:44 ..... started STAR run
+May 06 11:08:44 ..... loading genome
+May 06 11:08:44 ..... started mapping
+May 06 11:09:20 ..... finished mapping
+May 06 11:09:20 ..... started sorting BAM
+May 06 11:09:24 ..... finished successfully
+May 06 11:09:25 ..... started STAR run
+May 06 11:09:25 ..... loading genome
+May 06 11:09:25 ..... started mapping
+May 06 11:09:58 ..... finished mapping
+May 06 11:09:59 ..... started sorting BAM
+May 06 11:10:03 ..... finished successfully

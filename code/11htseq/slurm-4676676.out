@@ -1,0 +1,6 @@
+Error processing GFF file (line 14 of file /home/allu5328/Documents/genome_analysis/project/Data/08_braker/augustus.hints.gff):
+  Failure parsing GFF attribute line
+  [Exception type: ValueError, raised in features.py:98]
+Error processing GFF file (line 14 of file /home/allu5328/Documents/genome_analysis/project/Data/08_braker/augustus.hints.gff):
+  Failure parsing GFF attribute line
+  [Exception type: ValueError, raised in features.py:98]
