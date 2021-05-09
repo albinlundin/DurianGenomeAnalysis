@@ -139,8 +139,8 @@ I think my assembly is worse than the public available one, becuase of the vast 
 
 ### Structural and functional annotation
 #### RNA seq quality check and preprocessing using FastQC and Trimmomatic
-The quality of the two untrimmed RNA seq files were checked using FastQC by typing FastQC on the commandline and working through the FastQC gui. By looking at the per base sequence quality it was determined that the quality of the reads were dropping at the end of the sequences, as seen in the following image:
-![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/results/FastQC_rna/RNA_phred_before_trimm.png "Phred scores before trimming")
+The quality of the two untrimmed RNA seq files were checked using FastQC by typing FastQC on the commandline and working through the FastQC gui. By looking at the per base sequence quality it was determined that the quality of the reads were dropping at the end of the sequences, as seen in the following plot:
+![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/results/FastQC_rna/before_preprocessing/RNA_phred_before_trimm.png "Phred scores before trimming")
 
 
 
