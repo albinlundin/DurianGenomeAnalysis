@@ -138,7 +138,8 @@ The largest difference between my assembly and the reference is the length. As d
 I think my assembly is worse than the public available one, becuase of the vast number of contigs in the assembly as well as the many missassemblies. 
 
 ### Structural and functional annotation
-
+#### RNA seq quality check and preprocessing using FastQC and Trimmomatic
+The quality of the two untrimmed RNA seq files were checked using FastQC by typing FastQC on the commandline and working through the FastQC gui. 
 
 
 
