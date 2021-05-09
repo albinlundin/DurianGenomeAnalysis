@@ -3,7 +3,7 @@ my_project.md contains the project plan.
 
 ## Pipeline
 1. The script 01_pacbio_assembly.sh (in code/01_canu_assembly/) was used to generate a genome alignment of the pacbio reads using canu. The output assembly was obtained in a fasta file.
-2. FastQ was used to check the quality of the provided (and trimmed) illumina reads. This was done through the FastQC gui so there is no script for this step.
+2. FastQC was used to check the quality of the provided (and trimmed) illumina reads. This was done through the FastQC gui so there is no script for this step.
 3. The script 02_bwa_alignment.sh (in code/02_bwa_pacbio_illumina/) was used to align the illumina reads to the pacbio assembly using bwa. The output was obtained in a sam file. 
 4. To convert the obtained sam file to a bam file the following command was used: 
 ```bash
@@ -22,10 +22,10 @@ delta-filter -q out.delta > out.delta.filter
 mummerplot -p multiplot_filtered -l --png out.delta.filter
 mummerplot -p filtered --png out.delta.filter
 ```
-8. Trimmomatic was used to trimm the two untrimmed provided RNA sequence files, as seen in the script at code/07_trimmomatic. 
+8. Trimmomatic was used to trimm the two untrimmed provided RNA sequence files, as seen in the script at code/07_trimmomatic. Quality control before and after trimming was done with FastQC.
 9. Star was used to map all trimmed RNA seq files to the pilon polished, softmasked genome assembly to create a bam file using the script "code/08_star/03_star.sh". To map the trimmed RNA sequences to the softmasked reference genome the script "code/08_star/04_star.sh" was used.
-10. BRAKER was used to make a structural annotation of the genome assembly using the bam files produced by star as a hint. I could not get this to work with my assembly, so this was made with the reference assembly using the script "code/09_braker/reference_braker.sh". 
-11. To make the gtf file from braker into a protein sequence fasta fila and a gff file these two commands was used:
+10. BRAKER was used to make a structural annotation of the genome assembly using the bam files produced by star as a hint. I could not get this to work with my assembly, so this was only made with the reference assembly using the script "code/09_braker/reference_braker.sh". 
+11. To make the gtf file from braker into a protein sequence fasta file and a gff file these two commands was used:
 ```bash
 /sw/bioinfo/augustus/3.4.0/snowy/scripts/gtf2aa.pl $genome $gtf prot.fa
 /sw/bioinfo/augustus/3.4.0/snowy/scripts/gtf2gff.pl <$gtf --out=augustus.gff
@@ -33,6 +33,8 @@ mummerplot -p filtered --png out.delta.filter
 where $genome is the path to the softmasked reference genome and $gtf the path to the gtf file produced by braker.
 
 12. The file prot.fa was submitted to eggnogmapper using the web interface. All options were kept at their default values.
+
+13. 
 
 ## Analyses and results
 ### Quality check of the provided Illumina DNA reads using FastQC
