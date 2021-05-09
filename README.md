@@ -137,7 +137,7 @@ The largest difference between my assembly and the reference is the length. As d
 
 I think my assembly is worse than the public available one, becuase of the vast number of contigs in the assembly as well as the many missassemblies. 
 
-### Structural and functional annotation
+### RNA reads quality control an Reads preprocessing
 #### RNA seq quality check and preprocessing using FastQC and Trimmomatic
 The quality of the two untrimmed RNA seq files were checked using FastQC by typing FastQC on the commandline and working through the FastQC gui. By looking at the per base sequence quality it was determined that the quality of the reads were significantrly dropping at the end of the sequences, as seen in the following plot:
 ![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/results/FastQC_rna/before_preprocessing/RNA_phred_before_trimm.png "Phred scores before trimming")
@@ -147,10 +147,21 @@ To fix this, Trimmomatic was used as seen in the script "07_trimmomatic.sh" loca
 To check the quality of the trimmed reads FastQC was used once again. Shown below is the phred per base sequence quality plot after trimming:
 ![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/results/FastQC_rna/after_preprocessing/RNA_phred_after_trimm.png "Phred scores after trimming")
 
+Worth noting is that there still seems to be a problem with the sequence duplication levels and overrepresented sequences after trimming, but maybe it is fine since this is regarding RNA sequences meaning that there could be naturally occuring uneven coverage of the different RNA transcripts. Anyway, the phred score definetely improved by the trimming which is positive. 
 
+#### Questions from the student manual regarding Reads quality control
+- What is the structure of a FASTQ file?
+- How is the quality of the data stored in the FASTQ files? How are paired reads identified?
+- How is the quality of your data?
+- What can generate the issues you observe in your data? Can these cause any problems during subsequent analyses?
 
+#### Questions from the student manual regarding reads preprocessing
+- How many reads have been discarded after trimming?
+- How can this affect your future analyses and results?
+- How is the quality of your data after trimming?
+- What do the LEADING, TRAILING and SLIDINGWINDOW options do?
 
-
+### Mapping, structural-, and functional annotation 
 
 
 
