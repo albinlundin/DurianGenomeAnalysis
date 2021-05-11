@@ -188,4 +188,9 @@ In order to make a functional annotation, the gtf file produced by braker was ma
 - How comparable are the results obtained from two different structural annotation softwares?
 
 ### Differentaial expression analysis
+#### RNA reads mapping using star
+In order to do the differential expression analysis, star was once again used to map the RNA transcripts to the reference assembly (specify which transcripts) with the script "starDE.sh" located at "code/10_star_DE/". This time, the gtf file produced by braker was supplied when creating the genome index. The option sjdbOverhang was set to 100 since the optimal value is calculated as "Max(readlength)-1", and the longest RNA read being 101 basepairs long. This time 1 bam file was produced for each sample used.
 
+#### Read counting using Htseq
+
+#### Comparison of read counts using Deseq2
