@@ -20,18 +20,18 @@ STAR --runThreadN 8 \
 --runMode genomeGenerate \
 --genomeDir $genomeDir \
 --genomeFastaFiles /home/allu5328/Documents/genome_analysis/project/Data/05_repeatmasker/reference/reference_sequence_scaffold_11.fasta.masked \
---genomeSAindexNbases 11
---sjdbGTFfile $gtf
---sjdbOverhang 149
+--genomeSAindexNbases 11 \
+--sjdbGTFfile $gtf \
+--sjdbOverhang 100
 
-aril1="/home/allu5328/Documents/genome_analysis/project/Data/RawData/transcripts/trimmed/aril_SRR6156069_scaffold_11.1.fastq.gz"
-aril2="/home/allu5328/Documents/genome_analysis/project/Data/RawData/transcripts/trimmed/aril_SRR6156069_scaffold_11.2.fastq.gz"
+aril1="/home/allu5328/Documents/genome_analysis/project/Data/RawData/transcripts/trimmed/aril_SRR6040094_scaffold_11.1.fastq.gz"
+aril2="/home/allu5328/Documents/genome_analysis/project/Data/RawData/transcripts/trimmed/aril_SRR6040094_scaffold_11.2.fastq.gz"
 
 STAR --runThreadN 8 \
 --genomeDir $genomeDir \
 --readFilesCommand gunzip -c \
 --readFilesIn $aril1 $aril2 \
---outFileNamePrefix aril \
+--outFileNamePrefix aril_094 \
 --outSAMtype BAM SortedByCoordinate \
 --limitBAMsortRAM 2053908829
 
@@ -42,6 +42,6 @@ STAR --runThreadN 8 \
 --genomeDir $genomeDir \
 --readFilesCommand gunzip -c \
 --readFilesIn $root1 $root2 \
---outFileNamePrefix root \
+--outFileNamePrefix root_093 \
 --outSAMtype BAM SortedByCoordinate \
 --limitBAMsortRAM 2053908829

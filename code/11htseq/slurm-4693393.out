@@ -1,0 +1,3 @@
+Error processing GFF file (line 1 of file /home/allu5328/Documents/genome_analysis/project/Data/09_gff_and_protseq/augustus.gff):
+  Failure parsing GFF attribute line
+  [Exception type: ValueError, raised in features.py:98]

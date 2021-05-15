@@ -1,0 +1,12 @@
+[E::idx_find_and_load] Could not retrieve index file for '/home/allu5328/Documents/genome_analysis/project/Data/10_starDE/root_093Aligned.sortedByCoord.out.bam'
+40874 GFF lines processed.
+[E::idx_find_and_load] Could not retrieve index file for '/home/allu5328/Documents/genome_analysis/project/Data/10_starDE/root_093Aligned.sortedByCoord.out.bam'
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+Warning: Mate records missing for 19 records; first such record: <SAM_Alignment object: Paired-end read 'SRR6040093.18125213.1' aligned to NSDW01000011.1:[1541535,1541636)/->.
+719937 alignment pairs processed.
