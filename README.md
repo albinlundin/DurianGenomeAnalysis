@@ -38,7 +38,7 @@ where $genome is the path to the softmasked reference genome and $gtf the path t
 
 14. HTSEQ-count was used to count every read mapping to a certain gene using the script "htseq_aril.sh" and "htseq_root.sh", located at "code/11htseq/". 
 
-15. DESeq2 was used to make the differential expression analysis using the script "???" located at "code/12_deseq2/".
+15. DESeq2 was used to make the differential expression analysis using the script "DE_Analysis.R" located at "code/12_DESeq/".
 
 ## Analyses and results
 ### Quality check of the provided Illumina DNA reads using FastQC
