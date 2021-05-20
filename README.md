@@ -207,15 +207,14 @@ cat augustus.hints.gtf | grep 'transcript_id' > augustus.hints_removed.gtf
 #### Comparison of read counts using DESeq2
 To make the expression analysis DESeq2 was used, according to the script "DE_analysis.R" located at "code/12_DESeq", to compare the expression levels between fruit aril and root for the Musang King cultivar. Worth pointing out is that no replicates were used for the expression levels in roots, since only one RNA sequence file was provided. For the fruit aril, two replicates were used for the expression analysis. 
 
-Using DESeq, a log2 fold change plot, and a heatmap showing the genes with the highest variances of normalized readcounts between samples, was created. 
+Using DESeq, a log2 fold change plot, and a heatmap showing the genes with the highest variances of normalized readcounts between samples, was created as seen below. 
 
-Log2 fold change plot             |  Heatmap with genes having the highest variance between normalized readcounts
+Log fold change plot             |  Heatmap showing the genes having the highest variance between samples, normalized to library size
 :-------------------------:|:-------------------------:
-![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/results/DE_analysis/log2foldchange_noiseRemoved.png "log2 fold change plot")  |  ![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/results/DE_analysis/heatmap_mostVaried.png "Heatmap showing the genes with the higest variance between normalized readcounts")
+![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/results/DE_analysis/log2foldchange_noiseRemoved.png "log2 fold change plot")  |  ![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/results/DE_analysis/heatmap_mostVaried.png "Heatmap showing the genes with the highest variance between samples, normalized to library size")
 
-![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/results/DE_analysis/log2foldchange_noiseRemoved.png "log2 fold change plot")
+To remove the noise from genes with low counts in the log fold change plot, the function "lfcshrink" was used before plotting. The log fold change plot shows the distribution of log fold change values for the genes. The heatmap was created by first transforming the count data to the log2 scale using the function "rlog", which also normalizes in regard to library size. Then the 30 genes with the highest variance between samples were extracted, and centered by removing the rowmean from each value in every row. Subsequently, the heatmap displays some of the genes with the highest and lowest log fold changes when comparing root and fruit aril. 
 
-![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/results/DE_analysis/heatmap_mostVaried.png "Heatmap showing the genes with the higest variance between normalized readcounts")
 
 
 
