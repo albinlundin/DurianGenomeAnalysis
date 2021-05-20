@@ -209,6 +209,10 @@ To make the expression analysis DESeq2 was used, according to the script "DE_ana
 
 Using DESeq, a log2 fold change plot, and a heatmap showing the genes with the highest variances of normalized readcounts between samples, was created. 
 
+Log2 fold change plot             |  Heatmap with genes having the highest variance between normalized readcounts
+:-------------------------:|:-------------------------:
+![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/results/DE_analysis/log2foldchange_noiseRemoved.png "log2 fold change plot")  |  ![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/results/DE_analysis/heatmap_mostVaried.png "Heatmap showing the genes with the higest variance between normalized readcounts")
+
 ![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/results/DE_analysis/log2foldchange_noiseRemoved.png "log2 fold change plot")
 
 ![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/results/DE_analysis/heatmap_mostVaried.png "Heatmap showing the genes with the higest variance between normalized readcounts")
