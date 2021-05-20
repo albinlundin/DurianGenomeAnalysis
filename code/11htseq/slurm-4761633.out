@@ -1,0 +1,2 @@
+  file does not contain alignment data
+  [Exception type: ValueError, raised in libcalignmentfile.pyx:947]
