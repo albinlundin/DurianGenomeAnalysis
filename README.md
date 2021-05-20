@@ -2,6 +2,8 @@
 my_project.md contains the project plan.
 
 ## Pipeline
+The following steps were performed to assemble the genome of the durian cultivar Musang King, and to make an expression analysis comparing the expression levels between root and fruit aril of the cultivar.
+
 1. The script 01_pacbio_assembly.sh (in code/01_canu_assembly/) was used to generate a genome alignment of the pacbio reads using canu. The output assembly was obtained in a fasta file.
 2. FastQC was used to check the quality of the provided (and trimmed) illumina reads. This was done through the FastQC gui so there is no script for this step.
 3. The script 02_bwa_alignment.sh (in code/02_bwa_pacbio_illumina/) was used to align the illumina reads to the pacbio assembly using bwa. The output was obtained in a sam file. 
@@ -36,7 +38,7 @@ where $genome is the path to the softmasked reference genome and $gtf the path t
 
 13. STAR was again used to align the trimmed RNA transcripts to the reference genome. This time the gtf file produced by braker was used when creating the genome index, as seen in the script "starDE.sh" located at "code/10_star_DE/". 
 
-14. HTSEQ-count was used to count every read mapping to a certain gene using the script "htseq_aril.sh" and "htseq_root.sh", located at "code/11htseq/". 
+14. HTSEQ-count was used to count every read mapping to a certain gene using the script "htseq_aril.sh", "htseq_aril_097.sh", and "htseq_root.sh", located at "code/11htseq/". 
 
 15. DESeq2 was used to make the differential expression analysis using the script "DE_Analysis.R" located at "code/12_DESeq/".
 
@@ -194,14 +196,16 @@ In order to make a functional annotation, the gtf file produced by braker was ma
 In order to do the differential expression analysis, star was once again used to map the RNA transcripts to the reference assembly (specify which transcripts) with the script "starDE.sh" located at "code/10_star_DE/". This time, the gtf file produced by braker was supplied when creating the genome index. The option sjdbOverhang was set to 100 since the optimal value is calculated as "Max(readlength)-1", and the longest RNA read being 101 basepairs long. This time 1 bam file was produced for each sample used.
 
 #### Read counting using HTSeq
-To count the reads mapping to each gene, HTSeq-count was used according to the scripts "htseq_aril.sh", "htseq_aril and "htseq_root.sh" located at "code/11htseq/". The original gtf-file produced by braker did not work for HTSeq-count since some rows did not have the "transcript_id" or "gene_id" attributes in the last column. In order to make it work all lines without those attributes were filtered out, and the remaining rows were put into a new file like this:
+To count the reads mapping to each gene, HTSeq-count was used according to the scripts "htseq_aril.sh", "htseq_aril_097.sh" and "htseq_root.sh" located at "code/11htseq/". The original gtf-file produced by braker did not work for HTSeq-count since some rows did not have the "transcript_id" or "gene_id" attributes in the last column. In order to make it work, all lines with the attribut "transcript_id" were extracted using grep and put into a new file like this: 
 ```bash
 cat augustus.hints.gtf | grep 'transcript_id' > augustus.hints_removed.gtf
 ```
 
 
 #### Comparison of read counts using DESeq2
-To make the expression analysis DESeq2 was used, according to the script "???" located at "code/12_deseq2". Worth pointing out is that I did not use any replicates (since only one RNA seq file was provided for the root) meaning that the results presented here are unreliable and not statistically significant. 
+To make the expression analysis DESeq2 was used, according to the script "DE_analysis.R" located at "code/12_DESeq", to compare the expression levels between fruit aril and root for the Musang King cultivar. 
+
+Worth pointing out is that I did not use any replicates (since only one RNA seq file was provided for the root) meaning that the results presented here are unreliable and not statistically significant. 
 
 
 
