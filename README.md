@@ -219,9 +219,9 @@ The gene g609 has, according to the functional annotation of the Durian genome, 
 
 Another gene that has a higher expression in fruit arils compared to the root, is gene g268 which also can be seen in the heatmap. According to the functional annotation, this gene has the function "Myo-inositol oxygenase". In the paper "myo-Inositol Oxygenase Offers a Possible Entry Point into Plant Ascorbate Biosynthesis" [2] the authour suggest that myo-inositol oxygenase is the initial substrate in the biosynthesis of Ascorbate, also known as vitamin C. Ascorbate have several important functions in plants according to the paper "The Role of Ascorbate in Plant Growth and Development" [3], for instance it is involved in hormone biosynthesis and plant growth. The paper also suggests that Ascorbate is an inductor of seed germination, in which case it makes sense for this gene to have a higher expression in fruit arils compared to roots.
 
-One gene having higher expression in roots compared to fruit arils is g1252 (which is also present in the heatmap). This gene has the function "Dehydration-responsive element-binding protein" which according to *Pradeep K. et al* [4] is activated by abiotic stress responses such as high and low temperatures, drought, and high salinity. Since roots are responsible for water and nutrient takeup, it seems reasonable that this gene has a higher expression in roots compared to fruit arils if it is growing in stressful conditions. 
+One gene having higher expression in roots compared to fruit arils is g1252 (which is also present in the heatmap). This gene has the function "Dehydration-responsive element-binding protein" which according to *Pradeep K. et al* [4] is activated by abiotic stress responses such as high and low temperatures, drought, and high salinity. Since roots are responsible for water and nutrient takeup, it seems reasonable that this gene has a higher expression in roots compared to fruit arils if it is growing in stressful conditions. Gene g535 have the same function as g1252, and it also have higher expression in roots compared to arils.
 
-
+Another gene that has higher expression in roots compared to fruit arils is g2663. The function of this gene is to remove the phosphate from trehalos 6-phosphate to produce free trehalose. According to *Lunn J.E. et al* [5] trehalose is a potential signal metabolite for interactions between plants and pathogenic or symbiotic microorganisms and insects. Trehalose is also involved in responses to cold and salinity, as well as in regulation of water-use efficiency. With these functions in mind, it seems reasonable that the roots have a higher expression of this protein compared to the arils, especially if the durians are growing in stressful conditions. 
 
 
 
@@ -234,5 +234,5 @@ One gene having higher expression in roots compared to fruit arils is g1252 (whi
 
 [4] Pradeep K. Agarwal, Kapil Gupta, Sergiy Lopato, Parinita Agarwal, Dehydration responsive element binding transcription factors and their applications for the engineering of stress tolerance, Journal of Experimental Botany, Volume 68, Issue 9, 1 April 2017, Pages 2135–2148, https://doi.org/10.1093/jxb/erx118
 
-
+[5] Lunn, J.E., Delorge, I., Figueroa, C.M., Van Dijck, P. and Stitt, M. (2014), Trehalose metabolism in plants. Plant Journal, 79: 544-567. https://doi.org/10.1111/tpj.12509
 
