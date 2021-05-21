@@ -223,6 +223,7 @@ One gene having higher expression in roots compared to fruit arils is g1252 (whi
 
 Another gene that has higher expression in roots compared to fruit arils is g2663. The function of this gene is to remove the phosphate from trehalos 6-phosphate to produce free trehalose. According to *Lunn J.E. et al* [5] trehalose is a potential signal metabolite for interactions between plants and pathogenic or symbiotic microorganisms and insects. Trehalose is also involved in responses to cold and salinity, as well as in regulation of water-use efficiency. With these functions in mind, it seems reasonable that the roots have a higher expression of this protein compared to the arils, especially if the durians are growing in stressful conditions. 
 
+As a side note, none of the functions discussed above were mentioned in paper 5. However, the authors in that paper were most interested in finding a reason for the distinct smell of durian fruits, leaving little space for non smell related functions. Also, since only a small part of the durian genome was used in this project, it is possible that the smell related genes were non present. Lastly, not all genes with higher expression in arils compared to roots were examined, meaning that they could have been missed if they were present.
 
 
 ##### References
