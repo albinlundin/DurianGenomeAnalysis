@@ -219,6 +219,10 @@ The gene g609 has, according to the functional annotation of the Durian genome, 
 
 Another gene that has a higher expression in fruit arils compared to the root, is gene g268 which also can be seen in the heatmap. According to the functional annotation, this gene has the function "Myo-inositol oxygenase". In the paper "myo-Inositol Oxygenase Offers a Possible Entry Point into Plant Ascorbate Biosynthesis" [2] the authour suggest that myo-inositol oxygenase is the initial substrate in the biosynthesis of Ascorbate, also known as vitamin C. Ascorbate have several important functions in plants according to the paper "The Role of Ascorbate in Plant Growth and Development" [3], for instance it is involved in hormone biosynthesis and plant growth. The paper also suggests that Ascorbate is an inductor of seed germination, in which case it makes sense for this gene to have a higher expression in fruit arils compared to roots.
 
+One gene having higher expression in roots compared to fruit arils is g1252 (which is also present in the heatmap). This gene has the function "Dehydration-responsive element-binding protein" which according to *Pradeep K. et al* [4] is activated by abiotic stress responses such as high and low temperatures, drought, and high salinity. Since roots are responsible for water and nutrient takeup, it seems reasonable that this gene has a higher expression in roots compared to fruit arils if it is growing in stressful conditions. 
+
+
+
 
 
 ##### References
@@ -227,5 +231,8 @@ Another gene that has a higher expression in fruit arils compared to the root, i
 [2] Argelia Lorence, Boris I. Chevone, Pedro Mendes, Craig L. Nessler, myo-Inositol Oxygenase Offers a Possible Entry Point into Plant Ascorbate Biosynthesis, Plant Physiology, Volume 134, Issue 3, March 2004, Pages 1200–1205, https://doi.org/10.1104/pp.103.033936
 
 [3] Ortiz-Espín A., Sánchez-Guerrero A., Sevilla F., Jiménez A. (2017) The Role of Ascorbate in Plant Growth and Development. In: Hossain M., Munné-Bosch S., Burritt D., Diaz-Vivancos P., Fujita M., Lorence A. (eds) Ascorbic Acid in Plant Growth, Development and Stress Tolerance. Springer, Cham. https://doi-org.ezproxy.its.uu.se/10.1007/978-3-319-74057-7_2
+
+[4] Pradeep K. Agarwal, Kapil Gupta, Sergiy Lopato, Parinita Agarwal, Dehydration responsive element binding transcription factors and their applications for the engineering of stress tolerance, Journal of Experimental Botany, Volume 68, Issue 9, 1 April 2017, Pages 2135–2148, https://doi.org/10.1093/jxb/erx118
+
 
 
