@@ -122,27 +122,11 @@ The phred score definetely improved after trimming which is positive. Also, wort
 #### Star mapping
 In order to do a structural annotation using braker a bam file of aligned RNA sequences to a reference genome is needed. For this purpose, STAR is used. At "code/08_star/" there are four shell scripts of which all are working. However, there was an unresolved issue when using an alignment with my assembly when using braker resulting in a few scripts trying out a few different things. Eventually, the alignment was made with the reference sequence according to the script "04_star.sh", which ended up working with braker. Probably my assembly is a bit too fragmented for it to work properly with braker, but I am not completely sure about this. The script "04_star.sh" ouputs one bam file, covering all paired end RNA sequence fastq files. 
 
-##### Questions from the student manual regarding mapping
-- What percentage of your reads map back to your contigs? Why do you think that is?
-- What potential issues can cause mRNA reads not to map properly to genes in the chromosome? Do you expect this to differ between prokaryotic and eukaryotic projects?
-- What percentage of reads map to genes?
-- How many reads do not map to genes? What does that mean? How does that relate to the type of sequencing data you are mapping?
-- What do you interpret from your read coverage differences across the genome?
-- Do you see big differences between replicates? (maybe does not apply to this project???)
-
 #### Structural annotation
-To make the structural annotaion braker was used according to the script "reference_braker.sh" located at "code/09_braker/" was used. Running braker was quite problematic when using a bam file with my assembly which for some reason it would not work, even though the braker code for this bam file (script "08_braker.sh") essentially is the same as the one that ended up working for the reference sequence. As previously stated, this might have happened because of my alignment being too fragmented.
+To make the structural annotaion braker was used according to the script "reference_braker.sh" located at "code/09_braker/". Running braker was quite problematic when using a bam file with my assembly which for some reason would not work, even though the braker code for this bam file (script "08_braker.sh") essentially is the same as the one that ended up working for the reference sequence. As previously stated, this might have happened because of my alignment being too fragmented.
 
 #### Functional annotation
-In order to make a functional annotation, the gtf file produced by braker was made into a protein sequence fasta using the AUGUSTUS script "gtf2aa.pl". The resulting protein fasta sequences were then uploaded to the online version of eggnog-mapper, which was run with the default settings. The annotations was mostly inferred from the taxonomic level Streptophyta, which Durian fruits belong to. 
-
-##### Questions from the student manual regarding annotation
-- What types of features are detected by the software? Which ones are more reliable a priori?
-- How many features of each kind are detected in your contigs? Do you detect the same number of features as the authors? How do they differ?
-- Why is it more difficult to do the functional annotation in eukaryotic genomes?
-- How many genes are annotated as ‘hypothetical protein’? Why is that so? How would you tackle that problem?
-- How can you evaluate the quality of the obtained functional annotation?
-- How comparable are the results obtained from two different structural annotation softwares?
+In order to make a functional annotation, the gtf file produced by braker was made into a protein sequence fasta using the AUGUSTUS script "gtf2aa.pl" (which can be seen in the pipeline section of this document). The resulting protein fasta sequences were then uploaded to the online version of eggnog-mapper, which was run with the default settings. The annotations was mostly inferred from the taxonomic level Streptophyta, which Durian belongs to. 
 
 ### Differentaial expression analysis
 #### RNA reads mapping using star
@@ -240,3 +224,18 @@ I think my assembly is worse than the public available one, becuase of the vast 
 - How is the quality of your data after trimming?
 - What do the LEADING, TRAILING and SLIDINGWINDOW options do?
 
+##### Questions from the student manual regarding mapping
+- What percentage of your reads map back to your contigs? Why do you think that is?
+- What potential issues can cause mRNA reads not to map properly to genes in the chromosome? Do you expect this to differ between prokaryotic and eukaryotic projects?
+- What percentage of reads map to genes?
+- How many reads do not map to genes? What does that mean? How does that relate to the type of sequencing data you are mapping?
+- What do you interpret from your read coverage differences across the genome?
+- Do you see big differences between replicates? (maybe does not apply to this project???)
+
+##### Questions from the student manual regarding annotation
+- What types of features are detected by the software? Which ones are more reliable a priori?
+- How many features of each kind are detected in your contigs? Do you detect the same number of features as the authors? How do they differ?
+- Why is it more difficult to do the functional annotation in eukaryotic genomes?
+- How many genes are annotated as ‘hypothetical protein’? Why is that so? How would you tackle that problem?
+- How can you evaluate the quality of the obtained functional annotation?
+- How comparable are the results obtained from two different structural annotation softwares?
