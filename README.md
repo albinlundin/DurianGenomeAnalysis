@@ -41,7 +41,7 @@ where $genome is the path to the softmasked reference genome and $gtf the path t
 15. DESeq2 was used to make the differential expression analysis using the script "DE_Analysis.R" located at "code/12_DESeq/".
 
 ## Analyses and results
-In this section an in depth discussion about the differnt analyses steps and the subsequent results are presented.
+In this section a discussion about the different analysis steps and the subsequent results are presented.
 
 ### Quality check of the provided Illumina DNA reads using FastQC
 For the provided trimmed Illumina DNA reads the quality looked really good. The phred score was high for all base positions (which can be seen below) and everything else looked alright. 
