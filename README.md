@@ -34,7 +34,7 @@ where $genome is the path to the softmasked reference genome and $gtf the path t
 
 12. The file prot.fa was submitted to eggnogmapper using the web interface. All options were kept at their default values.
 
-13. STAR was again used to align the trimmed RNA transcripts to the reference genome, producing one bam file per sample chosen for the expression analysis using the scripts "star_aril2.sh" and "starDE.sh". "starDE.sh" was used for aligning one RNA seq file of the root and one RNA seq file for an aril. "star_aril2.sh" was used for aligning a second RNA seq file for a fruit aril when realising multiple replicates would work better with DESeq2. This time the gtf file produced by braker was used when creating the genome index, as seen in the script "starDE.sh" located at "code/10_star_DE/". 
+13. STAR was again used to align the trimmed RNA transcripts to the reference genome, producing one bam file per sample chosen for the expression analysis using the scripts "star_aril2.sh" and "starDE.sh". This time the gtf file produced by braker was used when creating the genome index, as seen in the script "starDE.sh" located at "code/10_star_DE/". 
 
 14. HTSEQ-count was used to count every read mapping to a certain gene using the scripts "htseq_aril.sh", "htseq_aril_097.sh", and "htseq_root.sh", located at "code/11htseq/". Each script made the counting with one sample.
 
@@ -129,8 +129,9 @@ To make the structural annotaion braker was used according to the script "refere
 In order to make a functional annotation, the gtf file produced by braker was made into a protein sequence fasta file using the AUGUSTUS script "gtf2aa.pl" (which can be seen in the pipeline section of this readme). The resulting protein fasta sequences were then uploaded to the online version of eggnog-mapper, which was run with the default settings. The annotations was mostly inferred from the taxonomic level Streptophyta, of which Durian belongs to. 
 
 ### Differentaial expression analysis
+
 #### RNA reads mapping using star
-In order to do the differential expression analysis, star was once again used to map the RNA transcripts to the reference assembly (specify which transcripts) with the script "starDE.sh" located at "code/10_star_DE/". This time, the gtf file produced by braker was supplied when creating the genome index. The option sjdbOverhang was set to 100 since the optimal value is calculated as "Max(readlength)-1", and the longest RNA read being 101 basepairs long. This time 1 bam file was produced for each sample used.
+In order to do the differential expression analysis, star was once again used to map the RNA transcripts to the reference assembly with the scripts "starDE.sh" and "star_aril2.sh" located at "code/10_star_DE/". This time, the gtf file produced by braker was supplied when creating the genome index. The option sjdbOverhang was set to 100 since the optimal value is calculated as "Max(readlength)-1", and the longest RNA read being 101 basepairs long. This time 1 bam file was produced for each sample used, where the script "starDE.sh" was used for creating one alignment with the root and one with the aril. "star_aril2.sh" was used for aligning a second RNA seq file for a fruit aril when realising multiple replicates would work better with DESeq2.
 
 #### Read counting using HTSeq
 To count the reads mapping to each gene, HTSeq-count was used according to the scripts "htseq_aril.sh", "htseq_aril_097.sh" and "htseq_root.sh" located at "code/11htseq/". The original gtf-file produced by braker did not work for HTSeq-count since some rows did not have the "transcript_id" or "gene_id" attributes in the last column. In order to make it work, all lines with the attribut "transcript_id" were extracted using grep and put into a new file like this: 
