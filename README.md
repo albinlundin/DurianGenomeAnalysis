@@ -116,7 +116,7 @@ To fix this, Trimmomatic was used as seen in the script "07_trimmomatic.sh" loca
 To check the quality of the trimmed reads FastQC was used once again. Shown below is the phred per base sequence quality plot after trimming:
 ![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/results/FastQC_rna/after_preprocessing/RNA_phred_after_trimm.png "Phred scores after trimming")
 
-The phred score definetely improved after trimming which is positive. Also, worth noting is that FastQC still complains about sequence duplication levels and overrepresented sequences after trimming, but I think that is fine since this is regarding RNA sequences meaning that there could be naturally occuring uneven coverage of the different RNA transcripts. 
+The phred score definetely improved after trimming which is positive. Also, worth noting is that FastQC complains about sequence duplication levels and overrepresented sequences after trimming, but I think that is fine since this is regarding RNA sequences meaning that there could be naturally occuring uneven coverage of the different RNA transcripts. 
 
 ### Mapping, structural-, and functional annotation 
 #### Star mapping
