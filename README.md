@@ -34,7 +34,7 @@ where $genome is the path to the softmasked reference genome and $gtf the path t
 
 12. The file prot.fa was submitted to eggnogmapper using the web interface. All options were kept at their default values.
 
-13. STAR was again used to align the trimmed RNA transcripts to the reference genome, but only from one sample at a time. This time the gtf file produced by braker was used when creating the genome index, as seen in the script "starDE.sh" located at "code/10_star_DE/". 
+13. STAR was again used to align the trimmed RNA transcripts to the reference genome, but only from one sample at a time using the scripts "star_aril2.sh" and "starDE.sh". "starDE.sh" was used for aligning one RNA seq file of the root and one RNA seq file for an aril. "star_aril2.sh" was used for aligning a second RNA seq file for a fruit aril when realising multiple replicates would work better with DESeq2. This time the gtf file produced by braker was used when creating the genome index, as seen in the script "starDE.sh" located at "code/10_star_DE/". 
 
 14. HTSEQ-count was used to count every read mapping to a certain gene using the scripts "htseq_aril.sh", "htseq_aril_097.sh", and "htseq_root.sh", located at "code/11htseq/". Each script made the counting with one sample.
 
@@ -120,13 +120,13 @@ The phred score definetely improved after trimming which is positive. Also, wort
 
 ### Mapping, structural-, and functional annotation 
 #### Star mapping
-In order to do a structural annotation using braker a bam file of aligned RNA sequences to a reference genome is needed. For this purpose, STAR is used. At "code/08_star/" there are four shell scripts of which all are working. However, there was an unresolved issue when using an alignment with my assembly when using braker resulting in a few scripts trying out a few different things. Eventually, the alignment was made with the reference sequence according to the script "04_star.sh", which ended up working with braker. Probably my assembly is a bit too fragmented for it to work properly with braker, but I am not completely sure about this. The script "04_star.sh" ouputs one bam file, covering all paired end RNA sequence fastq files. 
+In order to do a structural annotation using braker, a bam file of aligned RNA sequences to a reference genome is needed. For this purpose, STAR is used. At "code/08_star/" there are four shell scripts of which all are working. However, there was an unresolved issue when using an alignment with my assembly together with braker resulting in a few scripts trying out different things. Eventually, the alignment was made with the reference sequence according to the script "04_star.sh", which ended up working with braker. Probably my assembly is a bit too fragmented for it to work properly with braker, but I am not too sure about this. The script "04_star.sh" ouputs one bam file, covering all of the provided paired end RNA sequence fastq files. 
 
 #### Structural annotation
-To make the structural annotaion braker was used according to the script "reference_braker.sh" located at "code/09_braker/". Running braker was quite problematic when using a bam file with my assembly which for some reason would not work, even though the braker code for this bam file (script "08_braker.sh") essentially is the same as the one that ended up working for the reference sequence. As previously stated, this might have happened because of my alignment being too fragmented.
+To make the structural annotaion braker was used according to the script "reference_braker.sh" located at "code/09_braker/". Running braker was quite problematic when using a bam file of alignments to my assembly which for some reason would not work, even though the braker code for this bam file (script "08_braker.sh") essentially is the same as the one that ended up working for the reference sequence. As previously stated, this might have happened because of my alignment being too fragmented.
 
 #### Functional annotation
-In order to make a functional annotation, the gtf file produced by braker was made into a protein sequence fasta using the AUGUSTUS script "gtf2aa.pl" (which can be seen in the pipeline section of this document). The resulting protein fasta sequences were then uploaded to the online version of eggnog-mapper, which was run with the default settings. The annotations was mostly inferred from the taxonomic level Streptophyta, which Durian belongs to. 
+In order to make a functional annotation, the gtf file produced by braker was made into a protein sequence fasta file using the AUGUSTUS script "gtf2aa.pl" (which can be seen in the pipeline section of this readme). The resulting protein fasta sequences were then uploaded to the online version of eggnog-mapper, which was run with the default settings. The annotations was mostly inferred from the taxonomic level Streptophyta, of which Durian belongs to. 
 
 ### Differentaial expression analysis
 #### RNA reads mapping using star
