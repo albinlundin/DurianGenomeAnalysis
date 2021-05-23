@@ -68,22 +68,7 @@ To improve the canu assembly, pilon was used according to the script "03_pilon_p
 #### RepeatMasker
 To mask the assembly for repetetive sequences, repeatmasker was used according to the script "05_repeatmasker.sh" at "code/05_repeatmasker/". The used option '-xsmall' softmasks the genome. Some output metrics include that 2.68% of the assembly consisted of simple repeats, 1.1% of the genome had low complexity, and the GC level was measured to 30.6%. Repeatmasker was also used to softmask the reference sequence produced by the authors of paper 5 according to the script "reference_repeatmasker.sh", which ended up being the softmasked sequence used for the subsequent annotations and differential expression analysis.
 
-#### Questions from the Student manual regarding the assembly process
-- What information can you get from the plots and reports given by the assembler (if you get any)?
-- What intermediate steps generate informative output about the assembly?
-- How many contigs do you expect? How many do you obtain?
 
-I got 745 contigs in my assembly of scaffold 11. I think the expected number of contigs is 70, since the authors of paper 5 had 69 assembly gaps when assembling scaffold 11. In that case I clearly have more.
-- What is the difference between a ‘contig’ and a ‘unitig’?
-- What is the difference between a ‘contig’ and a ‘scaffold’?
-
-A contig is a DNA sequence without any gaps. A scaffold is an arrangement of multiple contigs in the same order as they would be in the genome. A scaffold do contain gaps, a contig does not. 
-- What are the k-mers? What k-mer(s) should you use? What are the problems and benefits of choosing a small kmer? And a big k-mer?
-
-K-mers are sequences present in the genome. For instance 5-mers are all possible sequences you can get of length 5. K-mers are used in assembly to see which reads are overlapping. If you choose a small k-mer you will have many overlaps for the reads, but it will increase computation time and coudl make it harder to assemble. If using a large k-mer you will have less overlaps between the reads, which might make the assembly easier to perform, but if using a to large k-mer you could miss some overlaps between reads.
-- Some assemblers can include a read-correction step before doing the assembly. What is this step doing?
-- How different do different assemblers perform for the same data?
-- Can you see any other letter appart from AGTC in your assembly? If so, what are those?
 
 ### Quality assessment of genome assembly
 #### QUAST
@@ -234,4 +219,26 @@ As a side note, none of the functions discussed above were mentioned in paper 5.
 [4] Pradeep K. Agarwal, Kapil Gupta, Sergiy Lopato, Parinita Agarwal, Dehydration responsive element binding transcription factors and their applications for the engineering of stress tolerance, Journal of Experimental Botany, Volume 68, Issue 9, 1 April 2017, Pages 2135–2148, https://doi.org/10.1093/jxb/erx118
 
 [5] Lunn, J.E., Delorge, I., Figueroa, C.M., Van Dijck, P. and Stitt, M. (2014), Trehalose metabolism in plants. Plant Journal, 79: 544-567. https://doi.org/10.1111/tpj.12509
+
+### Questions from the student manual
+This section contains answers to (some) of the questions from the student manual.
+
+#### Questions from the Student manual regarding the assembly process
+- What information can you get from the plots and reports given by the assembler (if you get any)?
+- What intermediate steps generate informative output about the assembly?
+- How many contigs do you expect? How many do you obtain?
+
+I got 745 contigs in my assembly of scaffold 11. I think the expected number of contigs is 70, since the authors of paper 5 had 69 assembly gaps when assembling scaffold 11. In that case I clearly have more.
+- What is the difference between a ‘contig’ and a ‘unitig’?
+- What is the difference between a ‘contig’ and a ‘scaffold’?
+
+A contig is a DNA sequence without any gaps. A scaffold is an arrangement of multiple contigs in the same order as they would be in the genome. A scaffold do contain gaps, a contig does not. 
+- What are the k-mers? What k-mer(s) should you use? What are the problems and benefits of choosing a small kmer? And a big k-mer?
+
+K-mers are sequences present in the genome. For instance 5-mers are all possible sequences you can get of length 5. K-mers are used in assembly to see which reads are overlapping. If you choose a small k-mer you will have many overlaps for the reads, but it will increase computation time and coudl make it harder to assemble. If using a large k-mer you will have less overlaps between the reads, which might make the assembly easier to perform, but if using a to large k-mer you could miss some overlaps between reads.
+- Some assemblers can include a read-correction step before doing the assembly. What is this step doing?
+- How different do different assemblers perform for the same data?
+- Can you see any other letter appart from AGTC in your assembly? If so, what are those?
+
+
 
