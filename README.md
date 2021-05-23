@@ -34,7 +34,7 @@ where $genome is the path to the softmasked reference genome and $gtf the path t
 
 12. The file prot.fa was submitted to eggnogmapper using the web interface. All options were kept at their default values.
 
-13. STAR was again used to align the trimmed RNA transcripts to the reference genome, but only from one sample at a time using the scripts "star_aril2.sh" and "starDE.sh". "starDE.sh" was used for aligning one RNA seq file of the root and one RNA seq file for an aril. "star_aril2.sh" was used for aligning a second RNA seq file for a fruit aril when realising multiple replicates would work better with DESeq2. This time the gtf file produced by braker was used when creating the genome index, as seen in the script "starDE.sh" located at "code/10_star_DE/". 
+13. STAR was again used to align the trimmed RNA transcripts to the reference genome, producing one bam file per sample chosen for the expression analysis using the scripts "star_aril2.sh" and "starDE.sh". "starDE.sh" was used for aligning one RNA seq file of the root and one RNA seq file for an aril. "star_aril2.sh" was used for aligning a second RNA seq file for a fruit aril when realising multiple replicates would work better with DESeq2. This time the gtf file produced by braker was used when creating the genome index, as seen in the script "starDE.sh" located at "code/10_star_DE/". 
 
 14. HTSEQ-count was used to count every read mapping to a certain gene using the scripts "htseq_aril.sh", "htseq_aril_097.sh", and "htseq_root.sh", located at "code/11htseq/". Each script made the counting with one sample.
 
