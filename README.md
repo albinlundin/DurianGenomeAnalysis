@@ -90,9 +90,9 @@ To check the quality of the assembly, QUAST was used according to the script at 
 
 A duplication ratio larger than 1 is quite expected considering that the total length of my assembly is 31.5 million bases, while the reference assembly roughly is 24 million bases. This can happen if the assembly has multiple contigs covering the same part of the reference, which happens if the assembly overestimates how many times a certain repeat sequence appears in a repeat region. Of course, this is something that could be improved to make the assembly length closer to the actual length.
 
-The largest alignment being 1,421,498 bases long I consider as quite good. The highest score this assembly could acheive on this metric is 2,660,159 bases which is the same as the largest contig length. The fact that these two metrics are not the same indicates that there is at least one missassembly event in the largest contig in the assembly, which is also something that could be improved. 
-
 I consider a NG50 value of 1,122,122 and a LG50 value of 7 to be quite good, indicating that most of my assembly is consisting of long contigs and that only 7 contigs in the assembly is needed for covering 50% of the reference. If looking at a slight larger part of the reference genome the NG75 value is 305,427 bases and the LG75 value is 19, which I also consider to be good values. However, something yet again indicating missassemblies in these long contigs are the NGA50 and LGA50 values (being 315,796 and 21 respectively), taking a significant drop compared to the NG50 and LG50 values. 
+
+The largest alignment being 1,421,498 bases long I consider as quite good. The highest score this assembly could acheive on this metric is 2,660,159 bases which is the same as the largest contig length. The fact that these two metrics are not the same indicates that there is at least one missassembly event in the largest contig in the assembly, which is also something that could be improved. 
 
 Overall, there were 258 missassemblies detected by QUAST which I think is quite high and definitely something that could be improved. The total number of contigs having missassemblies being 126 is something that indicates that the missassemblies is spread accross a quite large fraction of the contigs and not just confined to a few of the contigs, which would have been preferred. 
 
