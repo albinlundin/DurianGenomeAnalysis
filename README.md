@@ -10,7 +10,7 @@ The following steps were performed to assemble the genome of the durian cultivar
 ```bash
 samtools view -S -b pacbio_illumina_alignment.sam > pacbio_illumina_alignment.bam
 ```
-4. The script 03_pilon_polishing.sh (in code/03_pilon_polishing) was used to improve the pacbio assembly using the bam file from step 3. This script also sorted and indexed the bam file using samtools.
+4. The script 03_pilon_polishing.sh (in code/03_pilon_polishing) was used to improve the pacbio assembly using the bam file from step 3. This script also sorted and indexed the bam file using samtools, and outputed a fasta file for the assembly.
 5. To check the quality of the polished assembly quast was used (see code/04_quast_quality). 
 6. To softmask the pilon polished genome RepeatMasker was used as seen in the script "code/05_repeatmasker/05_repeatmasker.sh". The reference genome produced by the authors of paper 5 was also softmasked using the script "code/05_repeatmasker/reference_repeatmasker.sh". These scripts are essentially the same, only differing in the inputs. 
 7. As an extra quality check of the polished assembly, mummer was used as seen below. The resulting PNG of the multiplot can be found in "resutls/mummer/". Kepp in mind that the script in code/06_mummer does not work, and the code below was run directly on the command line.
