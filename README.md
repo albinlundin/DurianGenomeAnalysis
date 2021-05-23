@@ -6,12 +6,11 @@ The following steps were performed to assemble the genome of the durian cultivar
 
 1. The script 01_pacbio_assembly.sh (in code/01_canu_assembly/) was used to generate a genome alignment of the pacbio reads using canu. The output assembly was obtained in a fasta file.
 2. FastQC was used to check the quality of the provided (and trimmed) illumina reads. This was done through the FastQC gui so there is no script for this step.
-3. The script 02_bwa_alignment.sh (in code/02_bwa_pacbio_illumina/) was used to align the illumina reads to the pacbio assembly using bwa. The output was obtained in a sam file. 
-4. To convert the obtained sam file to a bam file the following command was used: 
+3. The script 02_bwa_alignment.sh (in code/02_bwa_pacbio_illumina/) was used to align the illumina reads to the pacbio assembly using bwa. The output was obtained in a sam file. To convert the obtained sam file to a bam file the following command was used: 
 ```bash
 samtools view -S -b pacbio_illumina_alignment.sam > pacbio_illumina_alignment.bam
 ```
-4. The script 03_pilon_polishing.sh (in code/03_pilon_polishing) was used to improve the pacbio assembly using the bam file from step 3. This script also sorted and index the bam file using samtools.
+4. The script 03_pilon_polishing.sh (in code/03_pilon_polishing) was used to improve the pacbio assembly using the bam file from step 3. This script also sorted and indexed the bam file using samtools.
 5. To check the quality of the polished assembly quast was used (see code/04_quast_quality). 
 6. To softmask the pilon polished genome RepeatMasker was used as seen in the script "code/05_repeatmasker/05_repeatmasker.sh". The reference genome produced by the authors of paper 5 was also softmasked using the script "code/05_repeatmasker/reference_repeatmasker.sh". These scripts are essentially the same, only differing in the inputs. 
 7. As an extra quality check of the polished assembly, mummer was used as seen below. The resulting PNG of the multiplot can be found in "resutls/mummer/". Kepp in mind that the script in code/06_mummer does not work, and the code below was run directly on the command line.
