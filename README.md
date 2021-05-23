@@ -50,9 +50,9 @@ The quality of the provided and trimmed Illumina DNA reads was assessed using Fa
 ### Genome assembly
 
 #### Canu
-To make the assembly using Canu, the script at code/01_canu_assembly was used. Apart from doing the actual assembly, Canu also performs correction of the bases as well as trimming of low quality regions. In this script the genomeSize parameter was set to 24 million since that is roughly the length for scaffold 11 in the genome assembly produced by the authors of paper 5. The output report from canu gives some statistics about the assembly:
-* 87% of the PacBio reads has an overlap, which is a good thing since most of the reads has an overlap.
-* NG50 for the assembly equals 1,121,946 basepairs, meaning that reads of that length or longer makes up 50% of the genome.
+To make the assembly using Canu, the script "01_pacbio_assembly.sh" at "code/01_canu_assembly/" was used. Apart from doing the actual assembly, Canu also performs correction of the bases as well as trimming of low quality regions. In this script the genomeSize parameter was set to 24 million since that is roughly the length for scaffold 11 in the genome assembly produced by the authors of paper 5. The output report from canu gives some statistics about the assembly:
+* 87% of the PacBio reads has an overlap, which is a good thing since that means that most of the reads has an overlap.
+* NG50 for the assembly equals 1,121,946 bases, meaning that reads of that length or longer makes up 50% of the genome.
 * LG50 for the assembly equals to 7 contigs, meaning that 7 contigs makes up the 50% of the genome.
 * Total length of the assembly equals 31.5 million base pairs. 
 * Number of contigs in the assembly is 745.
@@ -60,7 +60,7 @@ To make the assembly using Canu, the script at code/01_canu_assembly was used. A
 My assembly is quite a bit longer compared to the one produced by the authors of paper 5, being approximately 30% longer. My assembly also consists of many contigs which does not look so good since a lower number of contigs is preferrable. However, I am quite satisfied with the LG50 and NG50 values since the LG50 value is low meaning that I do have some long contigs. Notice that these two values are in relation to the genomeSize parameter that was specified in the script to 24 million bases, and not to the total length of the assembly. 
 
 #### BWA
-To align the paired end Illumina reads to the canu assembled genome bwa was used according to the script at code/02_bwa_pacbio_illumina/. Here I used the commands bwa aln and bwa sampe, which generates alignments given paired-end data. However, now I am under the impression that bwa mem would have been a better choice for the alignment due to it being more accurate, according to the bwa manual. 
+To align the paired end Illumina DNA reads to the canu assembled genome BWA was used according to the script "02_bwa_alignment.sh" located at "code/02_bwa_pacbio_illumina/". Here I used the commands bwa aln and bwa sampe, which generates alignments given paired-end data. However, I now realize that bwa mem would have been a better choice for the alignment due to it being more accurate, according to the BWA manual. 
 
 #### Pilon
 To improve the canu assembly pilon was used according to the script located at code/03_pilon_polishing/. There are not many choices to be made here, or any outputed statistics so there is not much to discuss about this. 
