@@ -44,7 +44,7 @@ where $genome is the path to the softmasked reference genome and $gtf the path t
 In this section a discussion about the different analyses and the subsequent results are presented.
 
 ### Quality check of the provided Illumina DNA reads using FastQC
-For the provided trimmed Illumina DNA reads the quality looked really good. The phred score was high for all base positions (which can be seen below) and everything else looked alright. 
+The quality of the provided and trimmed Illumina DNA reads was assessed using FastQC. The quality looked good, the phred score was high for all base positions (which can be seen in the plot below) and everything else looked alright. 
 ![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/results/FastQC_DNA_Illumina/Illumina_DNA_Phred.png "Phred score")
 
 ### Genome assembly
