@@ -60,13 +60,13 @@ To make the assembly using Canu, the script "01_pacbio_assembly.sh" at "code/01_
 My assembly is quite a bit longer compared to the one produced by the authors of paper 5, being approximately 30% longer. My assembly also consists of many contigs which does not look so good since a lower number of contigs is preferrable. However, I am quite satisfied with the LG50 and NG50 values since the LG50 value is low meaning that I do have some long contigs. Notice that these two values are in relation to the genomeSize parameter that was specified in the script to 24 million bases, and not to the total length of the assembly. 
 
 #### BWA
-To align the paired end Illumina DNA reads to the canu assembled genome BWA was used according to the script "02_bwa_alignment.sh" located at "code/02_bwa_pacbio_illumina/". Here I used the commands bwa aln and bwa sampe, which generates alignments given paired-end data. However, I now realize that bwa mem would have been a better choice for the alignment due to it being more accurate, according to the BWA manual. 
+To align the paired end Illumina DNA reads to the canu assembled genome BWA was used according to the script "02_bwa_alignment.sh" located at "code/02_bwa_pacbio_illumina/". Here I used the commands bwa aln and bwa sampe, which generates alignments given paired-end data. However, I now realize that bwa mem would have been a better choice for the alignment due to it being more accurate, according to the BWA manual. I am not sure to what extent this might have affected my assembly.
 
 #### Pilon
-To improve the canu assembly pilon was used according to the script located at code/03_pilon_polishing/. There are not many choices to be made here, or any outputed statistics so there is not much to discuss about this. 
+To improve the canu assembly pilon was used according to the script "03_pilon_polishing.sh" located at "code/03_pilon_polishing/". There are not many choices to be made here, or any outputed statistics so there is not much to discuss about this particular step. 
 
 #### RepeatMasker
-To mask the assembly for repetetive sequences, repeatmasker was used according to the script at code/05_repeatmasker/. The used option '-xsmall' softmasks the genome. 2.68% of the assembly consisted of simple repeats, 1.1% of the genome had low complexity, and the GC level was measured to 30.6%. 
+To mask the assembly for repetetive sequences, repeatmasker was used according to the script "05_repeatmasker.sh" at "code/05_repeatmasker/". The used option '-xsmall' softmasks the genome. Some output metrics include that 2.68% of the assembly consisted of simple repeats, 1.1% of the genome had low complexity, and the GC level was measured to 30.6%. Repeatmasker was also used to softmask the reference sequence produced by the authors of paper 5 according to the script "reference_repeatmasker.sh", which ended up being the one used for the subsequent annotations and differential expression analysis.
 
 #### Questions from the Student manual regarding the assembly process
 - What information can you get from the plots and reports given by the assembler (if you get any)?
