@@ -40,6 +40,10 @@ where $genome is the path to the softmasked reference genome and $gtf the path t
 
 15. DESeq2 was used to make the differential expression analysis using the script "DE_Analysis.R" located at "code/12_DESeq/".
 
+In this image an overview of the pipeline can be seen:
+![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/images/Pipeline.png "Pipeline")
+
+
 ## Analyses and results
 In this section a discussion about the different analyses and the subsequent results are presented.
 
