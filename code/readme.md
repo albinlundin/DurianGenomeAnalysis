@@ -20,3 +20,5 @@
 10_star_DE contains the star script producing the bam/sam files used in the differential expression analysis
 
 11_htseq contains the htseq-count script for counting reads
+
+12_DESeq contain the deseq script used for the differential expression analysis
