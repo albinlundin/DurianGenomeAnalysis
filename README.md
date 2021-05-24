@@ -92,7 +92,7 @@ To check the quality of the assembly, QUAST was used according to the script at 
 * Contigs in assembly	898
 * Largest contig	2,660,159
 
-A duplication ratio larger than 1 is quite expected considering that the total length of my assembly is 31.5 million bases, while the reference assembly roughly is 24 million bases. This can happen if the assembly has multiple contigs covering the same part of the reference, which happens if the assembly overestimates how many times a certain repeat sequence appears in a repeat region. Of course, it would have been better if the assembly length was closer to the actual length.
+A duplication ratio larger than 1 is quite expected considering that the total length of my assembly is 31.5 million bases, while the reference assembly roughly is 24 million bases. Having a duplication ratio larger that 1 happen if the assembly has multiple contigs covering the same part of the reference, which can happen if the assembly overestimates how many times a certain repeat sequence appears in a repeat region. Of course, it would have been better if the assembly length was closer to the actual length of 24 million bases.
 
 The largest alignment being 1,421,498 bases long I consider as an ok value. The highest score this assembly could acheive on this metric is 2,660,159 bases which is the same as the largest contig length. The fact that these two metrics are not the same indicates that there is at least one missassembly event in the largest contig in the assembly, which is also something that could be improved. 
 
