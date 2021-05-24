@@ -1,5 +1,5 @@
 # DurianGenomeAnalysis
-my_project.md contains the project plan.
+The project plan can be found in my_project.md.
 
 ## Pipeline
 The following steps were performed to assemble the genome of the durian cultivar Musang King, and to make an expression analysis comparing the expression levels between root and fruit aril of the cultivar.
