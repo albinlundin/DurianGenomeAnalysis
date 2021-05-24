@@ -105,10 +105,10 @@ There were also quite a few fully unaligned contigs, being 189 in total, taking 
 To conclude the QUAST quality assessment, I think that there were a few good metrics, but I also feel like it is quite evident that my assembly is worse than the one produced by the authors of paper 5. 
 
 #### MUMmerplot
-As an extra quality check of the genome assembly, mummerplot was used (or more specific nucmer and mummerplot) as described in the pipline section of this readme document (seen above). Note that the script at "code/mummer/" does not work. The following image (which can also be found at "results/mummer/") shows the multiplot produced by mummer:
+As an extra quality check of the genome assembly, mummerplot was used as described in the pipline section of this readme document (seen above). Note that the script at "code/mummer/" does not work. The following image (which can also be found at "results/mummer/") shows the multiplot produced by mummer:
 ![image](https://github.com/albinlundin/DurianGenomeAnalysis/blob/main/results/mummer/multiplot_filtered.png "Mummer multiplot")
 
-In this plot it is quite obvious that the assembly is quite a bit longer than reference sequence, but the continuous, red, diagonal line indicates that the content of the assembly is coherent with the reference, even if it consists of quite a few more contigs.
+In this plot it is quite obvious that the assembly is quite a bit longer than reference sequence, but the continuous, red, diagonal line indicates that the content of the assembly is coherent with the reference, even if it consists of quite a few more contigs. From this plot it can also be seen that the contigs responsible for the extra length of my assembly are short.
 
 ### RNA reads quality control an Reads preprocessing
 #### RNA seq quality check and preprocessing using FastQC and Trimmomatic
