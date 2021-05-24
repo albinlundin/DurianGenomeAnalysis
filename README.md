@@ -180,7 +180,7 @@ As a side note, none of the functions discussed above were mentioned in paper 5.
 
 
 ### Questions from the student manual
-This section contains answers to (some) of the questions from the student manual.
+This section contains answers to (some) questions from the student manual.
 
 #### Questions from the Student manual regarding the assembly process
 - What information can you get from the plots and reports given by the assembler (if you get any)?
@@ -231,7 +231,7 @@ I think my assembly is worse than the public available one, becuase of the vast 
 - How is the quality of your data after trimming?
 - What do the LEADING, TRAILING and SLIDINGWINDOW options do?
 
-##### Questions from the student manual regarding mapping
+#### Questions from the student manual regarding mapping
 - What percentage of your reads map back to your contigs? Why do you think that is?
 - What potential issues can cause mRNA reads not to map properly to genes in the chromosome? Do you expect this to differ between prokaryotic and eukaryotic projects?
 - What percentage of reads map to genes?
@@ -239,7 +239,7 @@ I think my assembly is worse than the public available one, becuase of the vast 
 - What do you interpret from your read coverage differences across the genome?
 - Do you see big differences between replicates? (maybe does not apply to this project???)
 
-##### Questions from the student manual regarding annotation
+#### Questions from the student manual regarding annotation
 - What types of features are detected by the software? Which ones are more reliable a priori?
 - How many features of each kind are detected in your contigs? Do you detect the same number of features as the authors? How do they differ?
 - Why is it more difficult to do the functional annotation in eukaryotic genomes?
