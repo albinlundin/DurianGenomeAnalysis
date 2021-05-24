@@ -179,10 +179,10 @@ As a side note, none of the functions discussed above were mentioned in paper 5.
 [5] Lunn JE, Delorge I, Figueroa CM, Dijck PV, Stitt M. Trehalose metabolism in plants. The Plant Journal. 2014;79(4):544–67. https://doi.org/10.1111/tpj.12509
 
 
-### Questions from the student manual
+## Questions from the student manual
 This section contains answers to (some) questions from the student manual.
 
-#### Questions from the Student manual regarding the assembly process
+### Questions from the Student manual regarding the assembly process
 - What information can you get from the plots and reports given by the assembler (if you get any)?
 - What intermediate steps generate informative output about the assembly?
 - How many contigs do you expect? How many do you obtain?
@@ -199,7 +199,7 @@ K-mers are sequences present in the genome. For instance 5-mers are all possible
 - How different do different assemblers perform for the same data?
 - Can you see any other letter appart from AGTC in your assembly? If so, what are those?
 
-#### Questions from the student manual regarding quality assessment
+### Questions from the student manual regarding quality assessment
 1. What do measures like N50, N90, etc. mean? How can they help you evaluate the quality of your assembly? Which measure is the best to summarize the quality of the assembly (N50, number of ORFs, completeness, total size, longest contig ...)
 
 * N50 - Contigs of this length or longer are needed to cover 50% of the assembly length
@@ -219,19 +219,19 @@ The largest difference between my assembly and the reference is the length. As d
 
 I think my assembly is worse than the public available one, becuase of the vast number of contigs in the assembly as well as the many missassemblies. 
 
-#### Questions from the student manual regarding Reads quality control
+### Questions from the student manual regarding Reads quality control
 - What is the structure of a FASTQ file?
 - How is the quality of the data stored in the FASTQ files? How are paired reads identified?
 - How is the quality of your data?
 - What can generate the issues you observe in your data? Can these cause any problems during subsequent analyses?
 
-#### Questions from the student manual regarding reads preprocessing
+### Questions from the student manual regarding reads preprocessing
 - How many reads have been discarded after trimming?
 - How can this affect your future analyses and results?
 - How is the quality of your data after trimming?
 - What do the LEADING, TRAILING and SLIDINGWINDOW options do?
 
-#### Questions from the student manual regarding mapping
+### Questions from the student manual regarding mapping
 - What percentage of your reads map back to your contigs? Why do you think that is?
 - What potential issues can cause mRNA reads not to map properly to genes in the chromosome? Do you expect this to differ between prokaryotic and eukaryotic projects?
 - What percentage of reads map to genes?
@@ -239,7 +239,7 @@ I think my assembly is worse than the public available one, becuase of the vast 
 - What do you interpret from your read coverage differences across the genome?
 - Do you see big differences between replicates? (maybe does not apply to this project???)
 
-#### Questions from the student manual regarding annotation
+### Questions from the student manual regarding annotation
 - What types of features are detected by the software? Which ones are more reliable a priori?
 - How many features of each kind are detected in your contigs? Do you detect the same number of features as the authors? How do they differ?
 - Why is it more difficult to do the functional annotation in eukaryotic genomes?
