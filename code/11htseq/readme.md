@@ -1,1 +1,1 @@
-htseq.sh did not work becuase of the gtf file used, instead htseq_aril.sh and htseq_root.sh was used
+htseq.sh did not work becuase of the gtf file used in this script, instead htseq_aril.sh, htseq_root.sh, and  was used
