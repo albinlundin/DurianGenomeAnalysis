@@ -102,7 +102,7 @@ I consider a NG50 value of 1,122,122 and a LG50 value of 7 to be quite good, ind
 
 There were also quite a few fully unaligned contigs, being 189 in total, taking up a significant fraction of the total number of contigs in the assembly. However, since their combined length is 2,067,295 it means that the average length of these contigs roughly is 11,000 bases which is not very long compared to some of the other contigs produced, and therefore these contigs maybe were not as good anyway. 
 
-To conclude the QUAST quality assessment, I think that the metrics look quite good apart from the apparent missassemblies. 
+To conclude the QUAST quality assessment, I think that there were a few good metrics, but I also feel like it is quite evident that my assembly is worse than the one produced by the authors of paper 5. 
 
 #### MUMmerplot
 As an extra quality check of the genome assembly, mummerplot was used (or more specific nucmer and mummerplot) as described in the pipline section of this readme document (seen above). Note that the script at "code/mummer/" does not work. The following image (which can also be found at "results/mummer/") shows the multiplot produced by mummer:
